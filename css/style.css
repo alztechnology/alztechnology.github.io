@@ -170,3 +170,21 @@ section{scroll-margin-top:100px}
   .coin__id img{width:24px;height:24px}
   .coin__name{font-size:11px}
 }
+
+/* ---------- Ebooks ---------- */
+.ebooks{display:grid;grid-template-columns:1fr;gap:18px}
+@media(min-width:560px){.ebooks{grid-template-columns:repeat(2,1fr)}}
+@media(min-width:1000px){.ebooks{grid-template-columns:repeat(4,1fr)}}
+.ebook{display:flex;flex-direction:column;background:var(--card);border:1px solid var(--line);border-radius:var(--radius);overflow:hidden;transition:transform .2s,border-color .2s,box-shadow .2s}
+.ebook:hover{transform:translateY(-3px);border-color:rgba(25,211,197,.4);box-shadow:0 16px 40px -20px rgba(25,211,197,.35)}
+.ebook--featured{border-color:rgba(25,211,197,.45);box-shadow:0 0 0 1px rgba(25,211,197,.15),0 16px 40px -24px rgba(25,211,197,.5)}
+.ebook__img{aspect-ratio:1/1;object-fit:cover;width:100%;background:var(--bg-2)}
+.ebook__body{padding:18px;display:flex;flex-direction:column;gap:8px;flex:1}
+.ebook__badge{align-self:flex-start;font-size:11px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:#04122b;background:var(--grad);padding:4px 10px;border-radius:999px}
+.ebook h3{font-size:17px;line-height:1.35;margin:0}
+.ebook p{color:var(--muted);font-size:14px;margin:0}
+.ebook__foot{margin-top:auto;padding-top:10px;display:flex;align-items:center;justify-content:space-between;gap:10px}
+.ebook__price{font-size:22px;font-weight:800;letter-spacing:-.01em}
+.btn--sm{padding:9px 16px;font-size:14px;border-radius:10px}
+.ebooks__store{margin:18px 0 0;font-size:14px;font-weight:600}
+.ebooks__note{margin:8px 0 0;font-size:13px;color:var(--dim)}
