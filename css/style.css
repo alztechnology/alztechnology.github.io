@@ -174,7 +174,13 @@ section{scroll-margin-top:100px}
 /* ---------- Ebooks ---------- */
 .ebooks{display:grid;grid-template-columns:1fr;gap:18px}
 @media(min-width:560px){.ebooks{grid-template-columns:repeat(2,1fr)}}
-@media(min-width:1000px){.ebooks{grid-template-columns:repeat(4,1fr)}}
+@media(min-width:1000px){
+  .ebooks{grid-template-columns:repeat(6,1fr)}
+  .ebooks .ebook{grid-column:span 2}
+  /* centre the leftover pair on a 5-card (3+2) row */
+  .ebooks .ebook:nth-child(4):nth-last-child(2){grid-column:2 / span 2}
+  .ebooks .ebook:nth-child(5):last-child{grid-column:4 / span 2}
+}
 .ebook{display:flex;flex-direction:column;background:var(--card);border:1px solid var(--line);border-radius:var(--radius);overflow:hidden;transition:transform .2s,border-color .2s,box-shadow .2s}
 .ebook:hover{transform:translateY(-3px);border-color:rgba(25,211,197,.4);box-shadow:0 16px 40px -20px rgba(25,211,197,.35)}
 .ebook--featured{border-color:rgba(25,211,197,.45);box-shadow:0 0 0 1px rgba(25,211,197,.15),0 16px 40px -24px rgba(25,211,197,.5)}
