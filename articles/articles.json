@@ -1,5 +1,15 @@
 [
   {
+    "title": "Stablecoins Explained: Digital Dollars on the Blockchain",
+    "url": "articles/stablecoins-explained.html",
+    "image": "articles/img/stablecoins-explained.jpg",
+    "imageAlt": "Digital dollar tokens moving across a blockchain network",
+    "summary": "A digital token designed to hold a steady value, usually pegged 1:1 to the US dollar. How reserves work, why stablecoins matter, the GENIUS Act and the risks.",
+    "tag": "Stablecoins",
+    "date": "2026-10-21",
+    "readMinutes": 2
+  },
+  {
     "title": "What is real-world asset (RWA) tokenization, in plain words?",
     "url": "articles/rwa-tokenization.html",
     "image": "articles/img/rwa-tokenization.jpg",
