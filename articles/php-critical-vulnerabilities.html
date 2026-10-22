@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>PHP's Critical Security Flaws: What Happened and What To Do | ALZ Technology</title>
+<meta name="description" content="Two critical PHP flaws (CVE-2026-109618 and CVE-2026-109619) were fixed on 21 Oct 2026. Who is at risk, what businesses should patch, and how to spot the phishing that follows.">
+<meta name="theme-color" content="#0a1430">
+<link rel="icon" href="../favicon.ico" sizes="any">
+<link rel="icon" type="image/png" sizes="32x32" href="../assets/img/favicon-32.png">
+<link rel="apple-touch-icon" href="../assets/img/apple-touch-icon.png">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="ALZ Technology">
+<meta property="og:title" content="PHP's Critical Security Flaws: What Happened and What To Do">
+<meta property="og:description" content="Two critical PHP flaws (CVE-2026-109618 and CVE-2026-109619) were fixed on 21 Oct 2026. Who is at risk, what businesses should patch, and how to spot the phishing that follows.">
+<meta property="og:image" content="https://alztechnology.github.io/articles/img/php-critical-vulnerabilities.jpg">
+<meta property="article:published_time" content="2026-10-22">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="PHP's Critical Security Flaws: What Happened and What To Do">
+<meta name="twitter:description" content="Two critical PHP flaws (CVE-2026-109618 and CVE-2026-109619) were fixed on 21 Oct 2026. Who is at risk, what businesses should patch, and how to spot the phishing that follows.">
+<meta name="twitter:image" content="https://alztechnology.github.io/articles/img/php-critical-vulnerabilities.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+<header class="nav" style="top:0">
+  <div class="container nav__inner">
+    <a class="nav__brand" href="../index.html" aria-label="ALZ Technology home">
+      <img src="../assets/img/alz-mark.png" alt="" width="58" height="22"><span>ALZ Technology</span>
+    </a>
+    <nav aria-label="Main">
+      <ul class="nav__links">
+        <li><a href="../index.html#markets">Markets</a></li>
+        <li><a href="../index.html#articles">Articles</a></li>
+        <li><a class="hide-sm" href="https://www.linkedin.com/company/alz-technology/" target="_blank" rel="noopener">LinkedIn</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main id="main" class="article">
+  <article class="container article__wrap">
+    <nav class="crumbs" aria-label="Breadcrumb"><a href="../index.html#articles">← All articles</a></nav>
+    <p class="eyebrow">Cybersecurity</p>
+    <h1>PHP's Critical Security Flaws: What Happened and What To Do</h1>
+    <div class="article__meta"><span>ALZ Technology</span><time datetime="2026-10-22">22 Oct 2026</time><span>2 min read</span></div>
+    <img class="article__hero" src="img/php-critical-vulnerabilities.jpg" alt="A glowing shield and padlock protecting web servers and code" width="1024" height="768">
+
+    <div class="prose">
+      <p class="lede">On 21 October 2026, the PHP project released urgent security updates for two critical vulnerabilities, CVE-2026-109618 and CVE-2026-109619. Both are rated 9.2 under CVSS v4.0 and can allow an attacker with no login to run their own code on an unpatched web server. PHP still powers a large share of the world's websites, so this one matters.</p>
+
+<h2>What happened</h2>
+<p>Both flaws sit deep inside PHP's memory management and error handling, parts of the language that nearly every web request touches. According to the PHP Foundation, the first (CVE-2026-109618) can corrupt memory when a request hits PHP's memory limit at exactly the wrong moment. The second (CVE-2026-109619) can leave a worker process pointing at memory from a previous request, a classic "use after free" bug. Researchers demonstrated full remote code execution on Apache with mod_php using default settings.</p>
+<p>The Canadian Centre for Cyber Security reports that proof-of-concept exploit code is publicly available. No active exploitation had been confirmed at the time of its alert, but that can change quickly.</p>
+
+<h2>Who is at risk</h2>
+<ul>
+<li><strong>Any server running PHP for the web</strong>, including PHP-FPM, Apache with mod_php, php-cgi, FrankenPHP and LiteSpeed. Risk is highest for mod_php.</li>
+<li><strong>Internet-facing sites</strong>: WordPress and other CMS sites, online shops, booking systems and customer portals built on PHP.</li>
+<li><strong>Old PHP versions.</strong> PHP 8.1 and earlier no longer receive official fixes, so those servers stay vulnerable unless a vendor backports a patch.</li>
+</ul>
+<p>Hosted platforms that run their own servers are responsible for patching their side. Static websites with no server-side code are not affected.</p>
+
+<h2>What businesses should do now</h2>
+<ul>
+<li><strong>Upgrade immediately</strong> to a fixed release: 8.5.12, 8.4.27, 8.3.36 or 8.2.35. The PHP team says there is no complete mitigation; updating is the only safe choice.</li>
+<li><strong>Restart PHP workers</strong> after upgrading and confirm the running version, not just the installed package.</li>
+<li><strong>Check what bundles PHP</strong>: containers, appliances, plugins and third-party products. Note that some managed tools' automatic updates do not cover PHP.</li>
+<li><strong>Prioritise internet-facing systems</strong>, and isolate anything you cannot patch yet.</li>
+<li><strong>Review logs</strong> for unusual processes, new accounts, unexpected files or outbound connections from web servers.</li>
+<li><strong>Ask your vendors</strong> (web agency, hosting provider, SaaS suppliers) to confirm in writing that they have patched.</li>
+</ul>
+
+<h2>For individuals: watch for the phishing wave</h2>
+<p>Big security news is a gift to scammers. Expect emails and messages that borrow the headline to create urgency, such as "your account ID is expiring", "urgent security maintenance" or "reset your password now".</p>
+<ul>
+<li>Do not click links in unexpected security emails. Open the site by typing its address yourself.</li>
+<li>Check the real sender address, not just the display name.</li>
+<li>Turn on two-factor authentication for email, banking, payment and exchange accounts.</li>
+<li>Never reuse passwords, and keep an eye on card and bank statements for unfamiliar charges.</li>
+</ul>
+
+<h2>The takeaway</h2>
+<p class="callout">Patch fast, verify the version that is actually running, and treat any urgent "security" email with suspicion. Good hygiene beats panic.</p>
+
+    </div>
+
+    <p class="article__foot">This article is for general information and education only. It is not financial, investment, legal or security advice.</p>
+  </article>
+</main>
+
+<footer class="footer">
+  <div class="container footer__inner">
+    <div>
+      <div class="footer__brand"><img src="../assets/img/alz-mark.png" alt="" width="53" height="20"> ALZ Technology</div>
+      <p style="margin-top:8px">© 2026 ALZ Technology · <a href="https://www.linkedin.com/company/alz-technology/" target="_blank" rel="noopener">LinkedIn</a></p>
+    </div>
+    <p class="disclaimer">Disclaimer: Content on this site is for general information and education only. It is not financial, investment, legal or tax advice. Crypto assets are volatile and you can lose money.</p>
+  </div>
+</footer>
+</body>
+</html>

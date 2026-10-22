@@ -1,5 +1,35 @@
 [
   {
+    "title": "PHP's Critical Security Flaws: What Happened and What To Do",
+    "url": "articles/php-critical-vulnerabilities.html",
+    "image": "articles/img/php-critical-vulnerabilities.jpg",
+    "imageAlt": "A glowing shield and padlock protecting web servers and code",
+    "summary": "Two critical PHP flaws (CVE-2026-109618 and CVE-2026-109619) were fixed on 21 Oct 2026. Who is at risk, what businesses should patch, and how to spot the phishing that follows.",
+    "tag": "Cybersecurity",
+    "date": "2026-10-22",
+    "readMinutes": 2
+  },
+  {
+    "title": "How AI Is Changing Business Analysis, and What Stays Human",
+    "url": "articles/ai-business-analysis.html",
+    "image": "articles/img/ai-business-analysis.jpg",
+    "imageAlt": "An AI network connected to requirement documents, a checklist, a flowchart and a data dashboard",
+    "summary": "Practical ways business analysts are using AI for requirements, UAT and data work, the risks to manage, and the skills that remain firmly human.",
+    "tag": "Business Analysis",
+    "date": "2026-10-22",
+    "readMinutes": 2
+  },
+  {
+    "title": "The XRP Ledger (XRPL) Explained Simply",
+    "url": "articles/xrpl-explained.html",
+    "image": "articles/img/xrpl-explained.jpg",
+    "imageAlt": "A blockchain network spanning a globe with payment arcs, digital tokens and tokenized certificates",
+    "summary": "What the XRP Ledger is, how its consensus works, how it is used for payments, stablecoins and tokenized assets, and the key facts to know.",
+    "tag": "Blockchain",
+    "date": "2026-10-22",
+    "readMinutes": 2
+  },
+  {
     "title": "Stablecoins Explained: Digital Dollars on the Blockchain",
     "url": "articles/stablecoins-explained.html",
     "image": "articles/img/stablecoins-explained.jpg",
