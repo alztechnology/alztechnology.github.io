@@ -1,5 +1,15 @@
 [
   {
+    "title": "Self-Custody Wallets Explained: Owning Your Keys Safely",
+    "url": "articles/self-custody-wallets.html",
+    "image": "articles/img/self-custody-wallets.jpg",
+    "imageAlt": "A crypto wallet protected by a key and padlock",
+    "summary": "What self-custody means, why personal-wallet theft hit about US$713M in 2025, and the habits that keep your crypto safe: seed phrases, hardware wallets, approvals and hot/cold splits.",
+    "tag": "Crypto Security",
+    "date": "2026-10-28",
+    "readMinutes": 2
+  },
+  {
     "title": "PHP's Critical Security Flaws: What Happened and What To Do",
     "url": "articles/php-critical-vulnerabilities.html",
     "image": "articles/img/php-critical-vulnerabilities.jpg",
