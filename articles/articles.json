@@ -1,5 +1,15 @@
 [
   {
+    "title": "Layer 1 vs Layer 2: What's the Difference?",
+    "url": "articles/layer1-vs-layer2.html",
+    "image": "articles/img/layer1-vs-layer2.jpg",
+    "imageAlt": "A base blockchain layer with a faster second layer built on top",
+    "summary": "What Layer 1 and Layer 2 blockchains are, how rollups make transactions faster and cheaper, and the risks to know before you bridge.",
+    "tag": "Blockchain",
+    "date": "2026-11-04",
+    "readMinutes": 2
+  },
+  {
     "title": "Self-Custody Wallets Explained: Owning Your Keys Safely",
     "url": "articles/self-custody-wallets.html",
     "image": "articles/img/self-custody-wallets.jpg",
