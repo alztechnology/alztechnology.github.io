@@ -3,6 +3,8 @@
 Static site for **ALZ Technology** (blockchain, Web3 and business analysis), made for GitHub Pages.
 Plain HTML, CSS and JavaScript. No build step and no dependencies.
 
+**Altseason tracker:** live Altcoin Season Index, BTC dominance, TOTAL2/TOTAL3, ETH/BTC, volume and breadth at https://alztechnology.github.io/altseason/
+
 ## Structure
 
 ```
@@ -10,6 +12,11 @@ index.html              Home: hero, live market board, articles, about, footer
 404.html                GitHub Pages "not found" page
 css/style.css           All styles (mobile first)
 js/main.js              Node-network animation, CoinGecko market board + ticker, article list
+altseason/index.html    Altseason tracker page (/altseason/)
+css/altseason.css       Altseason page styles (loads after style.css)
+js/altseason.js         Altseason index, stats, charts (Chart.js CDN), TradingView embed
+data/altseason.json     Daily 90-day history for the tracker (built by scripts/build_altseason_data.py)
+.github/workflows/altseason-data.yml  Refreshes data/altseason.json daily (00:20 UTC)
 articles/
   articles.json         List of articles shown on the home page
   _template.html        Copy this to write a new article
@@ -57,6 +64,14 @@ Paths in `articles.json` are relative to the site root. Remember the comma betwe
 - Coins: BTC, ETH, XRP, XLM, HBAR, ADA, XDC, SOL, DOGE, VET. To change them, edit the `COINS` array at the top of the market section in `js/main.js`. Use CoinGecko coin ids, for example `xdce-crowd-sale` for XDC.
 - It refreshes every 60 seconds while the tab is visible and backs off after repeated errors.
 - The last good response is cached in `localStorage`. If CoinGecko is down or rate-limited (HTTP 429), the board shows the cached prices with a "Live data temporarily unavailable" note.
+
+## Altseason tracker
+
+- Index: top 50 coins by market cap excluding Bitcoin, stablecoins, wrapped/staked tokens and tokenised funds or gold. Index = alts that beat BTC over the period / eligible x 100 (under 25 Bitcoin season, 75+ altcoin season). Shown for 90d, 30d and 7d.
+- 7d and 30d come live from CoinGecko `/coins/markets`; 90d compares the live price with the daily close 90 days ago from `data/altseason.json`.
+- Live stats refresh every 2 minutes (`/global` + `/coins/markets`), Fear & Greed from Alternative.me every 30 minutes, with a localStorage fallback.
+- To refresh the history by hand: `python3 scripts/build_altseason_data.py` (about 3 minutes, standard library only), or run the "Altseason data" workflow.
+- Exclusion list: `EXCLUDE_IDS` in both `js/altseason.js` and `scripts/build_altseason_data.py`.
 
 ## Publish on GitHub Pages
 

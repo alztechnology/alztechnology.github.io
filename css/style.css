@@ -194,3 +194,12 @@ section{scroll-margin-top:100px}
 .btn--sm{padding:9px 16px;font-size:14px;border-radius:10px}
 .ebooks__store{margin:18px 0 0;font-size:14px;font-weight:600}
 .ebooks__note{margin:8px 0 0;font-size:13px;color:var(--dim)}
+
+/* ---------- Nav: current page + small screens (6 links) ---------- */
+.nav__links a[aria-current="page"]{color:var(--text);background:rgba(25,211,197,.12)}
+@media(max-width:479px){.nav__links{gap:0}.nav__links a{padding:8px 6px;font-size:13px}.nav__links .hide-xs{display:none}}
+
+/* ---------- Altseason teaser (home) ---------- */
+.teaser{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:12px;margin-top:18px;padding:14px 18px;border-radius:14px;border:1px solid rgba(25,211,197,.3);background:linear-gradient(90deg,rgba(30,155,255,.08),rgba(25,211,197,.06))}
+.teaser p{margin:0;color:var(--muted);font-size:14px}
+.teaser b{color:var(--text)}

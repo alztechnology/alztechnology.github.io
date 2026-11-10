@@ -1,0 +1,280 @@
+<!doctype html>
+<html lang="en">
+<head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-M6ZDXHGDDV"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-M6ZDXHGDDV');
+</script>
+
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Altcoin Season Tracker | ALZ Technology</title>
+<meta name="description" content="Live altcoin season tracker: Altcoin Season Index (90d, 30d, 7d), Bitcoin dominance, TOTAL2, TOTAL3, ETH/BTC, volume and breadth. Education only, not financial advice.">
+<meta name="theme-color" content="#0a1430">
+<link rel="canonical" href="https://alztechnology.github.io/altseason/">
+<link rel="icon" href="../favicon.ico" sizes="any">
+<link rel="icon" type="image/png" sizes="32x32" href="../assets/img/favicon-32.png">
+<link rel="apple-touch-icon" href="../assets/img/apple-touch-icon.png">
+<link rel="manifest" href="../site.webmanifest">
+<!-- Open Graph / social -->
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="ALZ Technology">
+<meta property="og:url" content="https://alztechnology.github.io/altseason/">
+<meta property="og:title" content="Altcoin Season Tracker | ALZ Technology">
+<meta property="og:description" content="Is it altcoin season? Live index, Bitcoin dominance, TOTAL2/TOTAL3, ETH/BTC, volume and breadth in one dashboard.">
+<meta property="og:image" content="https://alztechnology.github.io/assets/img/og-image.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="ALZ Technology logo">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Altcoin Season Tracker | ALZ Technology">
+<meta name="twitter:description" content="Is it altcoin season? Live index, Bitcoin dominance, TOTAL2/TOTAL3, ETH/BTC, volume and breadth in one dashboard.">
+<meta name="twitter:image" content="https://alztechnology.github.io/assets/img/og-image.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preconnect" href="https://api.coingecko.com" crossorigin>
+<link rel="preconnect" href="https://s3.tradingview.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../css/style.css">
+<link rel="stylesheet" href="../css/altseason.css?v=2">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"Organization","name":"ALZ Technology","description":"Technology consultancy in Malaysia: blockchain, Web3 and business analysis.","logo":"https://alztechnology.github.io/assets/img/alz-logo.png","sameAs":["https://www.linkedin.com/company/alz-technology/"]}
+</script>
+</head>
+<body class="as">
+<a class="skip-link" href="#main">Skip to content</a>
+
+<div class="ticker" role="region" aria-label="Crypto price ticker">
+  <div class="ticker__track" id="ticker"><span class="ticker__empty">Loading prices…</span></div>
+</div>
+
+<header class="nav">
+  <div class="container nav__inner">
+    <a class="nav__brand" href="/" aria-label="ALZ Technology home">
+      <img src="../assets/img/alz-mark.png" alt="" width="58" height="22">
+      <span>ALZ Technology</span>
+    </a>
+    <nav aria-label="Main">
+      <ul class="nav__links">
+        <li><a href="/#markets">Markets</a></li>
+        <li><a href="/altseason/" aria-current="page">Altseason</a></li>
+        <li><a href="/#articles">Articles</a></li>
+        <li><a href="/#ebooks">Shop</a></li>
+        <li><a class="hide-xs" href="/#about">About</a></li>
+        <li><a class="hide-sm" href="https://www.linkedin.com/company/alz-technology/" target="_blank" rel="noopener">LinkedIn</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+  <div class="as-head">
+    <div class="container as-head__row">
+      <div>
+        <p class="eyebrow">Altseason tracker</p>
+        <h1>Is it <span class="grad-text">altcoin season</span>?</h1>
+        <p>Breadth, dominance, ETH/BTC and volume in one place, so you can see which regime the market is in and whether it is turning.</p>
+      </div>
+      <div class="status" id="status" role="status" aria-live="polite"><span class="status__dot"></span><span id="status-text">Connecting…</span></div>
+    </div>
+  </div>
+
+  <!-- 1. Regime -->
+  <section class="section" id="regime" aria-labelledby="regime-title">
+    <div class="container">
+      <p class="notice" id="notice">Live data temporarily unavailable.</p>
+      <div class="regime">
+        <div class="panel gauge">
+          <h3 id="regime-title">Altcoin Season Index · 90 days</h3>
+          <p class="panel__sub">Share of the top 50 alts beating Bitcoin</p>
+          <svg viewBox="0 0 220 132" role="img" aria-labelledby="gauge-desc" id="gauge">
+            <title id="gauge-desc">Altcoin Season Index gauge</title>
+            <path d="M20 110 A90 90 0 0 1 44.18 48.62" fill="none" stroke="#f7931a" stroke-width="16" stroke-linecap="round" opacity=".85"/>
+            <path d="M48.62 44.18 A90 90 0 0 1 171.38 44.18" fill="none" stroke="#8f7cff" stroke-width="16" opacity=".55"/>
+            <path d="M175.82 48.62 A90 90 0 0 1 200 110" fill="none" stroke="#19d3c5" stroke-width="16" stroke-linecap="round" opacity=".9"/>
+            <text x="16" y="131" fill="#7d8bab" font-size="9" font-family="Inter,sans-serif">0</text>
+            <text x="190" y="131" fill="#7d8bab" font-size="9" font-family="Inter,sans-serif">100</text>
+            <g id="needle" transform="rotate(-90 110 110)" style="transition:transform 1s cubic-bezier(.2,.8,.2,1)">
+              <line x1="110" y1="110" x2="110" y2="32" stroke="#fff" stroke-width="3" stroke-linecap="round"/>
+            </g>
+            <circle cx="110" cy="110" r="7" fill="#fff"/>
+          </svg>
+          <div class="gauge__val" id="idx90">–</div>
+          <div class="gauge__label" id="idx-label">Loading</div>
+          <div class="gauge__cap" id="idx-cap">0–25 Bitcoin season · 25–75 mixed · 75–100 altcoin season</div>
+          <div class="scores">
+            <div class="score"><div class="score__k">90d</div><div class="score__v" id="s90">–</div><div class="score__bar"><i id="b90"></i></div></div>
+            <div class="score"><div class="score__k">30d</div><div class="score__v" id="s30">–</div><div class="score__bar"><i id="b30"></i></div></div>
+            <div class="score"><div class="score__k">7d</div><div class="score__v" id="s7">–</div><div class="score__bar"><i id="b7"></i></div></div>
+          </div>
+        </div>
+        <div class="panel read" aria-live="polite">
+          <p class="eyebrow">The read right now</p>
+          <h2 id="read-title">Loading the market regime…</h2>
+          <p id="read-body">We compare the top 50 altcoins with Bitcoin over 90, 30 and 7 days and check dominance, ETH/BTC and volume.</p>
+          <ul class="read__pos" id="read-pos"></ul>
+          <p class="nfa"><strong>Not financial advice.</strong> This is a framework for thinking about positioning, not a signal to buy or sell. Crypto is volatile and you can lose money. Do your own research.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 2. Headline figures -->
+  <section class="section" id="figures" aria-labelledby="figures-title">
+    <div class="container">
+      <div class="section__head"><div>
+        <p class="eyebrow">Headline figures</p>
+        <h2 id="figures-title">Dominance, market cap and volume</h2>
+        <p class="section__sub">Live from CoinGecko. Refreshes every 2 minutes while this tab is open.</p>
+      </div></div>
+      <div class="stats" id="stats" aria-busy="true">
+        <div class="stat"><div class="stat__k">BTC dominance</div><div class="stat__v" id="v-btcd">–</div><div class="stat__s" id="s-btcd">Share of total market cap</div></div>
+        <div class="stat"><div class="stat__k">ETH dominance</div><div class="stat__v" id="v-ethd">–</div><div class="stat__s">Share of total market cap</div></div>
+        <div class="stat"><div class="stat__k">Others dominance</div><div class="stat__v" id="v-othd">–</div><div class="stat__s">Ex BTC and ETH (incl. stables)</div></div>
+        <div class="stat"><div class="stat__k">Stablecoin dominance</div><div class="stat__v" id="v-stbd">–</div><div class="stat__s">Top-100 stables, approx.</div></div>
+        <div class="stat"><div class="stat__k">ETH / BTC</div><div class="stat__v" id="v-ethbtc">–</div><div class="stat__s" id="s-ethbtc">–</div></div>
+        <div class="stat"><div class="stat__k">Total market cap</div><div class="stat__v" id="v-total">–</div><div class="stat__s" id="s-total">24h change</div></div>
+        <div class="stat"><div class="stat__k">TOTAL2 · ex BTC</div><div class="stat__v" id="v-total2">–</div><div class="stat__s">Total minus Bitcoin</div></div>
+        <div class="stat"><div class="stat__k">TOTAL3 · ex BTC+ETH</div><div class="stat__v" id="v-total3">–</div><div class="stat__s">Total minus BTC and ETH</div></div>
+        <div class="stat"><div class="stat__k">24h volume</div><div class="stat__v" id="v-vol">–</div><div class="stat__s" id="s-vol">All coins</div></div>
+        <div class="stat"><div class="stat__k">Fear &amp; Greed</div><div class="stat__v" id="v-fng">–</div><div class="stat__s" id="s-fng">Alternative.me</div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Signals -->
+  <section class="section" id="signals" aria-labelledby="signals-title">
+    <div class="container">
+      <div class="section__head"><div>
+        <p class="eyebrow">Confirmation checklist</p>
+        <h2 id="signals-title">What would confirm a rotation into alts</h2>
+        <p class="section__sub">Each line is computed from the data on this page. No single line is a trigger on its own.</p>
+      </div></div>
+      <div class="panel">
+        <ul class="signals" id="signal-list"><li class="sig"><span class="sig__ico">…</span><span>Loading signals…</span><span></span></li></ul>
+        <p class="sigsum" id="signal-sum"></p>
+      </div>
+    </div>
+  </section>
+
+  <!-- 3. Graphs -->
+  <section class="section" id="charts" aria-labelledby="charts-title">
+    <div class="container">
+      <div class="section__head"><div>
+        <p class="eyebrow">Charts</p>
+        <h2 id="charts-title">The rotation charts</h2>
+        <p class="section__sub">Full history from TradingView. Daily candles, pick a chart below.</p>
+      </div></div>
+      <div class="panel">
+        <div class="tabs" role="tablist" aria-label="Chart symbol" id="tv-tabs">
+          <button class="tab" role="tab" aria-selected="true" data-sym="CRYPTOCAP:BTC.D" data-note="Bitcoin dominance. Alt seasons usually start when this rolls over and breaks lower.">BTC.D</button>
+          <button class="tab" role="tab" aria-selected="false" data-sym="BINANCE:ETHBTC" data-note="ETH priced in BTC. ETH tends to lead the rotation, so a rising ETH/BTC is often the first tell.">ETH/BTC</button>
+          <button class="tab" role="tab" aria-selected="false" data-sym="CRYPTOCAP:TOTAL2" data-note="Total market cap excluding Bitcoin. Watch for breakouts above prior highs.">TOTAL2</button>
+          <button class="tab" role="tab" aria-selected="false" data-sym="CRYPTOCAP:TOTAL3" data-note="Total market cap excluding BTC and ETH: the broad altcoin market.">TOTAL3</button>
+          <button class="tab" role="tab" aria-selected="false" data-sym="CRYPTOCAP:OTHERS.D" data-note="Dominance of everything outside the top 10. This rising is the late, broad phase of alt season.">OTHERS.D</button>
+          <button class="tab" role="tab" aria-selected="false" data-sym="CRYPTOCAP:USDT.D" data-note="Tether dominance. Rising USDT.D usually means risk-off (money parked in stables); falling means money is going back into coins.">USDT.D</button>
+          <button class="tab" role="tab" aria-selected="false" data-sym="CRYPTOCAP:TOTAL" data-note="Total crypto market cap with volume bars: is the whole pie growing?">TOTAL + volume</button>
+        </div>
+        <div class="tv" id="tv" role="tabpanel" aria-label="TradingView chart"></div>
+        <p class="tv__note" id="tv-note">Bitcoin dominance. Alt seasons usually start when this rolls over and breaks lower.</p>
+      </div>
+
+      <div class="grid2" style="margin-top:14px">
+        <div class="panel">
+          <h3>Altcoin Season Index, last 90 days</h3>
+          <p class="panel__sub">Rolling 90d and 30d scores, computed daily. Shaded: under 25 and over 75.</p>
+          <div class="chartbox"><canvas id="ch-index" role="img" aria-label="Line chart of the Altcoin Season Index over the last 90 days"></canvas><div class="chart-empty" id="ch-index-empty">History is unavailable right now.</div></div>
+        </div>
+        <div class="panel">
+          <h3>ETH/BTC, last 90 days</h3>
+          <p class="panel__sub">Daily close. A rising line means ETH is outperforming Bitcoin.</p>
+          <div class="chartbox"><canvas id="ch-ethbtc" role="img" aria-label="Line chart of ETH/BTC over the last 90 days"></canvas><div class="chart-empty" id="ch-ethbtc-empty">History is unavailable right now.</div></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 4. Volume and breadth -->
+  <section class="section" id="volume" aria-labelledby="volume-title">
+    <div class="container">
+      <div class="section__head"><div>
+        <p class="eyebrow">Volume and breadth</p>
+        <h2 id="volume-title">Where the money is trading</h2>
+        <p class="section__sub">Is alt volume expanding relative to Bitcoin? Rotations need volume behind them.</p>
+      </div></div>
+      <div class="grid2">
+        <div class="panel">
+          <h3>24h volume split</h3>
+          <p class="panel__sub" id="vsplit-sub">Top 100 coins by market cap</p>
+          <div class="vsplit" id="vsplit" aria-hidden="true"></div>
+          <ul class="vlegend" id="vlegend"><li><span style="--c:#7d8bab">Loading…</span></li></ul>
+          <p class="panel__sub" style="margin:12px 0 0">Stablecoin volume is mostly trading pairs, so the useful comparison is BTC vs alts.</p>
+        </div>
+        <div class="panel">
+          <h3>Alt volume vs BTC volume</h3>
+          <p class="panel__sub">Daily volume of the top 50 alts divided by Bitcoin's, with a 7-day average.</p>
+          <div class="chartbox"><canvas id="ch-vol" role="img" aria-label="Line chart of altcoin volume relative to Bitcoin volume"></canvas><div class="chart-empty" id="ch-vol-empty">History is unavailable right now.</div></div>
+        </div>
+      </div>
+
+      <div class="section__head" style="margin-top:28px"><div>
+        <h3 style="margin:0;font-size:20px" id="lb-title">Top 50 alts vs Bitcoin</h3>
+        <p class="section__sub">Performance relative to BTC. Positive = beat Bitcoin. Tap a column to sort.</p>
+      </div></div>
+      <div class="tablewrap">
+        <table class="lb" aria-labelledby="lb-title" id="lb">
+          <thead><tr>
+            <th scope="col"><button type="button" data-k="rank">#</button></th>
+            <th scope="col"><button type="button" data-k="name">Coin</button></th>
+            <th scope="col"><button type="button" data-k="rel7">7d vs BTC</button></th>
+            <th scope="col"><button type="button" data-k="rel30">30d vs BTC</button></th>
+            <th scope="col" aria-sort="descending"><button type="button" data-k="rel90">90d vs BTC</button></th>
+            <th scope="col"><button type="button" data-k="beat">90d</button></th>
+          </tr></thead>
+          <tbody id="lb-body"><tr><td colspan="6" class="dim" style="text-align:left">Loading…</td></tr></tbody>
+        </table>
+      </div>
+      <div class="lbfoot"><span id="lb-foot">Excludes Bitcoin, stablecoins, wrapped/staked tokens and tokenised funds or gold.</span><span>Data: <a href="https://www.coingecko.com/" target="_blank" rel="noopener">CoinGecko</a></span></div>
+    </div>
+  </section>
+
+  <!-- 5. How to read -->
+  <section class="section" id="howto" aria-labelledby="howto-title">
+    <div class="container">
+      <div class="section__head"><div>
+        <p class="eyebrow">How to read it</p>
+        <h2 id="howto-title">The indicators, in plain words</h2>
+      </div></div>
+      <div class="howto">
+        <div class="panel"><h3>Altcoin Season Index (breadth)</h3><p>Of the top 50 alts, how many beat Bitcoin over the period. Under 25 means Bitcoin is leading almost everything. Over 75 means most alts are leading: a broad alt season. The 30d and 7d versions show whether the regime is starting to turn before the 90d score confirms it.</p></div>
+        <div class="panel"><h3>Bitcoin dominance (BTC.D)</h3><p>Bitcoin's share of the whole market. Rotations into alts usually show up as BTC.D rolling over. A falling BTC.D together with a rising total market cap is the healthier version; BTC.D falling because everything is dumping is not.</p></div>
+        <div class="panel"><h3>ETH/BTC (the leading tell)</h3><p>Money often rotates from BTC into ETH first, then into large caps, then into smaller coins. ETH/BTC making higher highs is usually an early sign. If ETH/BTC keeps falling, broad alt strength tends not to last.</p></div>
+        <div class="panel"><h3>TOTAL2, TOTAL3 and OTHERS.D</h3><p>TOTAL2 is the market without Bitcoin, TOTAL3 without BTC and ETH. OTHERS.D is the share of coins outside the top 10. These breaking higher shows the move is spreading from the majors to the wider market, which tends to come later in the cycle.</p></div>
+        <div class="panel"><h3>Volume (confirmation)</h3><p>Price moves without volume fade easily. When alt volume grows faster than Bitcoin volume, money is actually rotating, not just thin markets drifting up.</p></div>
+        <div class="panel"><h3>Stablecoin dominance and sentiment</h3><p>A rising stablecoin share means money is sitting on the sidelines (risk-off). Fear &amp; Greed at extreme greed has often lined up with tops, and extreme fear with better entries for patient buyers. Use it as context, not a timer.</p></div>
+      </div>
+      <p class="sources"><strong>Method.</strong> Top 50 coins by market cap from CoinGecko, excluding Bitcoin, stablecoins (USDT, USDC, DAI, USDe, FDUSD, USDS and similar), wrapped or staked tokens (WBTC, WETH, stETH, WBETH, weETH, cbBTC and similar) and tokenised funds or gold. A coin counts if its price change beat Bitcoin's over the period. Index = coins that beat BTC ÷ eligible coins × 100. 7d and 30d use CoinGecko's live percentages; 90d compares today's price with the daily close 90 days ago. The history chart uses today's top 50, so it carries some survivorship bias. Dominance and market cap come from CoinGecko's global data, which can differ slightly from TradingView's CRYPTOCAP figures.</p>
+      <p class="sources"><strong>Sources.</strong> <a href="https://www.coingecko.com/" target="_blank" rel="noopener">CoinGecko</a> (coingecko.com) for prices, market cap, dominance and volume · <a href="https://www.tradingview.com/" target="_blank" rel="noopener">TradingView</a> (tradingview.com) for the history charts · <a href="https://alternative.me/crypto/fear-and-greed-index/" target="_blank" rel="noopener">Alternative.me</a> (alternative.me) for the Fear &amp; Greed Index. Index method in the spirit of <a href="https://www.blockchaincenter.net/en/altcoin-season-index/" target="_blank" rel="noopener">Blockchain Center</a>'s Altcoin Season Index; our numbers are computed independently and may differ.</p>
+    </div>
+  </section>
+</main>
+
+<footer class="footer">
+  <div class="container footer__inner">
+    <div>
+      <div class="footer__brand"><img src="../assets/img/alz-mark.png" alt="" width="53" height="20"> ALZ Technology</div>
+      <p style="margin-top:8px">© 2026 ALZ Technology · <a href="/">Home</a> · <a href="https://www.linkedin.com/company/alz-technology/" target="_blank" rel="noopener">LinkedIn</a></p>
+    </div>
+    <p class="disclaimer">Disclaimer: This tracker is for general information and education only. It is not financial, investment, legal or tax advice, and nothing here is a recommendation to buy or sell. Crypto assets are volatile and you can lose money. Market data is provided by CoinGecko, TradingView and Alternative.me and may be delayed or inaccurate.</p>
+  </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js" defer></script>
+<script src="../js/altseason.js?v=2" defer></script>
+</body>
+</html>
