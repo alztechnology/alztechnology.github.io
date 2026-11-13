@@ -94,10 +94,25 @@ h3{font-size:19px;font-weight:700}
 .about strong{color:#fff}
 .about__cta{display:flex;flex-wrap:wrap;gap:12px}
 @media(min-width:900px){.about__cta{justify-content:flex-end}}
+
+/* Status quad templates */
+.quads{list-style:none;margin:0;padding:0;display:grid;gap:22px;grid-template-columns:1fr}
+@media(min-width:600px){.quads{grid-template-columns:repeat(2,1fr)}}
+@media(min-width:960px){.quads{grid-template-columns:repeat(3,1fr)}}
+.quad-card{display:flex;flex-direction:column;background:#fff;border:1px solid var(--line);border-radius:var(--radius);overflow:hidden;box-shadow:0 6px 18px rgba(11,31,58,.08);text-decoration:none;color:inherit;transition:box-shadow .2s,transform .2s;height:100%}
+.quad-card:hover{box-shadow:0 12px 28px rgba(11,31,58,.16);transform:translateY(-2px)}
+.quad-card:focus-visible{outline:3px solid var(--teal-l);outline-offset:2px}
+.quad-card img{width:100%;aspect-ratio:16/9;object-fit:cover;background:var(--tint)}
+.quad-card__body{display:flex;align-items:baseline;justify-content:space-between;gap:12px;padding:14px 16px 16px}
+.quad-card h3{margin:0;font-size:16px;color:var(--navy-d)}
+.quad-card__price{margin:0;font-family:Montserrat,sans-serif;font-weight:800;color:var(--teal);font-size:18px;white-space:nowrap}
+.quads__bundle{margin-top:32px;background:#fff;border:1px solid var(--line);border-top:5px solid var(--teal);border-radius:var(--radius);padding:24px 28px;display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:16px;box-shadow:0 12px 32px rgba(11,31,58,.10)}
+.quads__bundle h3{margin:0 0 6px}
+.quads__bundle p{margin:0;color:var(--muted);max-width:520px}
 /* Footer */
 .kit-footer{background:#071529;color:#A9BCD3;padding:26px 0;font-size:14px}
 .kit-footer__inner{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:10px}
 .kit-footer__brand{display:flex;align-items:center;gap:8px;color:#fff;font-family:Montserrat,sans-serif;font-weight:700}
 .kit-footer p{margin:0}
 .kit-footer a{color:#D6E2F0}
-@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.btn,.slides a{transition:none}.btn:hover,.slides a:hover{transform:none}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.btn,.slides a,.quad-card{transition:none}.btn:hover,.slides a:hover,.quad-card:hover{transform:none}}
