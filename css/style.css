@@ -118,6 +118,7 @@ section{scroll-margin-top:100px}
 @media(min-width:860px){.about{grid-template-columns:1.3fr 1fr;padding:40px}}
 .about p{color:var(--muted);margin:0 0 14px}
 .about__banner{border-radius:14px;border:1px solid var(--line);width:100%;aspect-ratio:1128/191;object-fit:cover}
+.about .btn{vertical-align:middle;margin:0 8px 8px 0}
 .chips{display:flex;flex-wrap:wrap;gap:8px;margin:6px 0 20px;padding:0;list-style:none}
 .chips li{font-size:13px;padding:6px 12px;border-radius:999px;background:rgba(255,255,255,.05);border:1px solid var(--line);color:var(--text)}
 
@@ -190,6 +191,7 @@ section{scroll-margin-top:100px}
 .ebook__body{padding:18px;display:flex;flex-direction:column;gap:8px;flex:1}
 .ebook__badge{align-self:flex-start;font-size:11px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:#04122b;background:var(--grad);padding:4px 10px;border-radius:999px}
 .ebook h3{font-size:17px;line-height:1.35;margin:0}
+.ebook h3 a{color:inherit;text-decoration:none}.ebook h3 a:hover{text-decoration:underline}
 .ebook p{color:var(--muted);font-size:14px;margin:0}
 .ebook__foot{margin-top:auto;padding-top:10px;display:flex;align-items:center;justify-content:space-between;gap:10px}
 .ebook__price{font-size:22px;font-weight:800;letter-spacing:-.01em}

@@ -13,6 +13,9 @@ index.html              Home: hero, live market board, articles, about, footer
 css/style.css           All styles (mobile first)
 js/main.js              Node-network animation, CoinGecko market board + ticker, article list
 altseason/index.html    Altseason tracker page (/altseason/)
+ba-pm-kit/index.html    BA & PM Presentation Kit page (/ba-pm-kit/), standalone corporate style, no crypto links
+css/ba-pm-kit.css       Styles for /ba-pm-kit/ only (does not load style.css)
+assets/img/ba-pm-kit/   Kit cover, OG image (1200x630) and 14 slide previews
 css/altseason.css       Altseason page styles (loads after style.css)
 js/altseason.js         Altseason index, stats, charts (Chart.js CDN), TradingView embed
 data/altseason.json     Daily 90-day history for the tracker (built by scripts/build_altseason_data.py)
