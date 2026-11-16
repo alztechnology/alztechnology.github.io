@@ -1,0 +1,211 @@
+<!doctype html>
+<html lang="en">
+<head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-M6ZDXHGDDV"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-M6ZDXHGDDV');
+</script>
+
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Self-Custody Security Cheatsheet | ALZ Technology Studio</title>
+<meta name="description" content="A printable, wallet-agnostic self-custody security cheatsheet: recovery phrase safety, address checks, test transactions, phishing red flags, explorers and recovery drills.">
+<link rel="canonical" href="https://alztechnology.github.io/studio/cheatsheet.html">
+<meta name="theme-color" content="#0a1430">
+<link rel="icon" href="../favicon.ico" sizes="any">
+<link rel="icon" type="image/png" sizes="32x32" href="../assets/img/favicon-32.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../css/style.css">
+<link rel="stylesheet" href="studio.css">
+<style>
+.cs{padding:40px 0 24px}
+.cs h1{font-size:clamp(26px,5vw,40px);line-height:1.15;margin:8px 0 10px;letter-spacing:-.02em}
+.cs .lead{color:var(--muted);max-width:760px;margin:0 0 18px}
+.cs-grid{display:grid;gap:14px}
+@media(min-width:760px){.cs-grid{grid-template-columns:1fr 1fr}}
+.cs-card{background:linear-gradient(180deg,var(--card),var(--bg-2));border:1px solid var(--line);border-radius:14px;padding:16px 18px}
+.cs-card h2{font-size:16px;margin:0 0 8px;color:var(--text)}
+.cs-card ul{margin:0;padding-left:18px}
+.cs-card li{color:#dce4f5;font-size:14px;margin:4px 0}
+.cs-card--key{border-color:rgba(255,92,122,.45);grid-column:1/-1}
+.cs-card--key h2{color:#ff9db0}
+.cs-wide{grid-column:1/-1}
+.cs-tbl td:first-child{font-weight:600;color:var(--text);white-space:nowrap}
+.cs-check{list-style:none;padding:0!important}
+.cs-check li::before{content:"☐ ";color:var(--teal)}
+.cs-foot{font-size:12px;color:var(--dim);margin-top:18px}
+@media print{
+  @page{size:A4;margin:10mm}
+  :root{--text:#000;--muted:#222;--dim:#444;--line:#bbb}
+  body{background:#fff!important;color:#000;font-size:10pt;line-height:1.35}
+  .cs .lead{font-size:9.5pt;margin:0 0 8px}
+  .cs-card li{margin:1px 0}
+  .cs-card ul{padding-left:14px}
+  .nav,.skip-link,.no-print,.footer{display:none!important}
+  .cs{padding:0}
+  .cs h1{font-size:18pt;color:#000;margin:2px 0 6px}
+  .grad-text{color:#000!important;background:none!important;-webkit-text-fill-color:#000}
+  .eyebrow{color:#000}
+  .cs-grid{grid-template-columns:1fr 1fr;gap:6px}
+  .cs-card{background:#fff!important;border:1px solid #999;padding:6px 9px;break-inside:avoid;page-break-inside:avoid}
+  .cs-card--key{border:2px solid #000}
+  .cs-card h2,.cs-card--key h2{color:#000;font-size:10.5pt;margin:0 0 4px}
+  .cs-card li,.tbl td{color:#000!important;font-size:8.6pt}
+  .callout{font-size:8.6pt;padding:6px 10px;margin:8px 0}
+  .cs-foot{margin-top:6px}
+  .tbl-wrap{border-color:#999;overflow:visible}
+  table.tbl{min-width:0}
+  .tbl th{background:#eee!important;color:#000}
+  .tbl th,.tbl td{border-color:#bbb;padding:4px 6px}
+  .callout{background:#fff!important;color:#000;border-left:3px solid #000}
+  a{color:#000;text-decoration:underline}
+  .cs-print-url::after{content:" (xrpl.org/docs/concepts/accounts/reserves)"}
+}
+</style>
+</head>
+<body class="st">
+<a class="skip-link" href="#main">Skip to content</a>
+<header class="nav">
+  <div class="container nav__inner">
+    <a class="nav__brand" href="../" aria-label="ALZ Technology home"><img src="../assets/img/alz-mark.png" alt="" width="58" height="22"><span>ALZ Technology</span></a>
+    <nav aria-label="Cheatsheet"><ul class="nav__links"><li><a href="index.html#case-wallets">← Back to Portfolio</a></li></ul></nav>
+  </div>
+</header>
+
+<main id="main" class="cs">
+  <div class="container">
+    <p class="eyebrow">ALZ Technology · Client resource</p>
+    <h1>Self-Custody <span class="grad-text">Security Cheatsheet</span></h1>
+    <p class="lead">A short, printable reminder of the habits that keep a self-custody wallet safe. Wallet-agnostic, with short notes for the wallets my clients use. You hold your keys, so you hold the responsibility: keep this somewhere you will see it.</p>
+    <div class="controls no-print">
+      <button class="btn btn--primary btn--sm" type="button" id="print-btn">Print / Save as PDF</button>
+      <a class="btn btn--ghost btn--sm" href="index.html#case-wallets">Back to the wallet case study</a>
+    </div>
+
+    <div class="cs-grid">
+      <section class="cs-card cs-card--key" aria-labelledby="h-seed">
+        <h2 id="h-seed">1 · Your recovery phrase is the wallet</h2>
+        <ul>
+          <li><b>Never share it</b> with anyone: not support staff, not a "wallet validator", not friends. No real company will ever ask for it.</li>
+          <li><b>Never type it into a website</b>, form, chat or "sync" page. The only place it belongs is the wallet app or device during a genuine restore.</li>
+          <li><b>Store it offline:</b> written on paper or stamped on metal, kept somewhere safe from fire, water and other people. No photos, screenshots, cloud notes, email or password-manager notes.</li>
+          <li>Anyone who has the phrase can take everything. Losing it with no backup means losing access for good.</li>
+        </ul>
+      </section>
+
+      <section class="cs-card" aria-labelledby="h-setup">
+        <h2 id="h-setup">2 · Set up safely</h2>
+        <ul>
+          <li>Download wallet apps only from the official website or app store listing; check the developer name.</li>
+          <li>Use a <b>hardware wallet for larger amounts</b>. Buy it new from the maker or an authorised reseller, never second-hand.</li>
+          <li>Keep a small "spending" wallet separate from long-term savings.</li>
+          <li>Lock your phone and wallet app with a PIN or biometrics; keep the OS and app updated.</li>
+        </ul>
+      </section>
+
+      <section class="cs-card" aria-labelledby="h-send">
+        <h2 id="h-send">3 · Before every send</h2>
+        <ul>
+          <li><b>Verify the address</b> character by character at the start, middle and end. Copy-paste malware can swap addresses.</li>
+          <li>On a hardware wallet, confirm the address <b>on the device screen</b>, not just the computer.</li>
+          <li>Check the network: sending on the wrong chain can lose funds.</li>
+          <li><b>Test with a small transaction</b> first for any new address, then send the rest.</li>
+          <li>Add any required memo or destination tag (see the XRPL note).</li>
+        </ul>
+      </section>
+
+      <section class="cs-card" aria-labelledby="h-phish">
+        <h2 id="h-phish">4 · Phishing red flags</h2>
+        <ul>
+          <li>Urgency: "your wallet will be suspended", "act within 24 hours".</li>
+          <li>Free airdrops or tokens you didn't expect, asking you to "claim" by connecting or signing.</li>
+          <li>Look-alike links and domains, sponsored search ads, QR codes from strangers.</li>
+          <li>Requests to sign something you don't understand. If in doubt, reject it.</li>
+          <li>"Double your crypto" offers and investment "managers". These are scams.</li>
+        </ul>
+      </section>
+
+      <section class="cs-card" aria-labelledby="h-support">
+        <h2 id="h-support">5 · Fake support DMs</h2>
+        <ul>
+          <li>Real support <b>never DMs you first</b> on X, Telegram, Discord, WhatsApp or Facebook.</li>
+          <li>Anyone asking for your phrase, a screen share or remote access is a scammer.</li>
+          <li>Get help only through the official website's help pages, reached by typing the address yourself.</li>
+          <li>Post publicly about a problem and expect fake "agents" to reply. Ignore them.</li>
+        </ul>
+      </section>
+
+      <section class="cs-card" aria-labelledby="h-approvals">
+        <h2 id="h-approvals">6 · Approvals and connected apps</h2>
+        <ul>
+          <li>Connecting a wallet to an app and signing can grant ongoing permissions.</li>
+          <li><b>Phantom / Solana:</b> review connected apps in the wallet settings and disconnect anything you don't use. Revoke token approvals (delegations) you no longer need using a reputable revoke tool, then confirm the change on Solscan.</li>
+          <li>Treat a wallet that has signed something suspicious as compromised: move funds to a fresh wallet with a new phrase.</li>
+        </ul>
+      </section>
+
+      <section class="cs-card" aria-labelledby="h-explorers">
+        <h2 id="h-explorers">7 · Check on an explorer</h2>
+        <ul>
+          <li>An explorer shows what really happened on-chain: status, amount, addresses and fees.</li>
+          <li><b>XRP Ledger:</b> <a href="https://xrpscan.com/" target="_blank" rel="noopener">XRPScan</a>, <a href="https://bithomp.com/" target="_blank" rel="noopener">Bithomp</a></li>
+          <li><b>Stellar:</b> <a href="https://stellar.expert/" target="_blank" rel="noopener">Stellar.expert</a></li>
+          <li><b>Solana:</b> <a href="https://solscan.io/" target="_blank" rel="noopener">Solscan</a></li>
+          <li>Paste your <b>public</b> address or transaction hash only. Never the phrase.</li>
+        </ul>
+      </section>
+
+      <section class="cs-card" aria-labelledby="h-drill">
+        <h2 id="h-drill">8 · Recovery drill</h2>
+        <ul class="cs-check">
+          <li>Once, with a small balance, restore the wallet from your written phrase on a spare or reset device.</li>
+          <li>Confirm the same addresses and balance appear.</li>
+          <li>Check your backup is readable and stored where you think it is.</li>
+          <li>Repeat after any change to your backup, and review it once a year.</li>
+          <li>Decide how a trusted person could recover funds in an emergency, without sharing the phrase today.</li>
+        </ul>
+      </section>
+
+      <section class="cs-card cs-wide" aria-labelledby="h-wallets">
+        <h2 id="h-wallets">9 · Wallet notes</h2>
+        <div class="tbl-wrap"><table class="tbl cs-tbl" style="min-width:0">
+          <tbody>
+            <tr><td>SafePal</td><td>Hardware and app wallet. Buy the device from an official channel, set it up yourself, and update firmware only through the official app.</td></tr>
+            <tr><td>Xaman</td><td>XRP Ledger wallet. Read every sign request before approving; only add trustlines for tokens you have researched. Your secret numbers or family seed stay offline.</td></tr>
+            <tr><td>LOBSTR</td><td>Stellar wallet. Stellar accounts keep a small minimum XLM balance; add the memo when an exchange asks for one.</td></tr>
+            <tr><td>Phantom</td><td>Solana (and other networks) wallet. Watch for fake airdrop tokens and unknown sign requests; review connected apps and approvals regularly.</td></tr>
+            <tr><td>Ledger</td><td>Hardware wallet. Never type its 24 words into a computer or phone; confirm every address and transaction on the device screen.</td></tr>
+          </tbody>
+        </table></div>
+      </section>
+
+      <section class="cs-card cs-wide" aria-labelledby="h-xrpl">
+        <h2 id="h-xrpl">10 · XRP Ledger note: reserve and destination tags</h2>
+        <ul>
+          <li><b>Base reserve:</b> every XRPL account must keep a minimum amount of XRP that cannot be sent, plus an extra owner reserve for each trustline or other object it holds. The amounts are set by the network and can change: check the current figures at <a class="cs-print-url" href="https://xrpl.org/docs/concepts/accounts/reserves" target="_blank" rel="noopener">xrpl.org reserves</a>. Removing unused trustlines frees their reserve.</li>
+          <li><b>Destination tags:</b> exchanges often use one shared address and a destination tag to identify your account. When depositing to an exchange, always include the tag it shows you. A missing or wrong tag can delay or lose the deposit.</li>
+        </ul>
+      </section>
+    </div>
+
+    <p class="callout callout--warn" style="margin-top:16px"><strong>Not financial advice.</strong> This cheatsheet is general security education only. It is not financial, investment or legal advice and does not endorse any wallet, exchange or asset. Wallet names are used for reference only; menus and features change, so always check the wallet's official help pages.</p>
+    <p class="cs-foot">© 2026 ALZ Technology · alztechnology.github.io/studio · Clients always keep control of their own keys and recovery phrases.</p>
+  </div>
+</main>
+
+<footer class="footer">
+  <div class="container footer__inner">
+    <div class="footer__brand"><img src="../assets/img/alz-mark.png" alt="" width="53" height="20"> ALZ Technology</div>
+    <p class="disclaimer">General security education only. Not financial, investment, legal or tax advice.</p>
+  </div>
+</footer>
+<script>document.getElementById('print-btn').addEventListener('click', function(){ window.print(); });</script>
+</body>
+</html>

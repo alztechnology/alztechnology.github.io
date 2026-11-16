@@ -15,6 +15,10 @@ js/main.js              Node-network animation, CoinGecko market board + ticker,
 altseason/index.html    Altseason tracker page (/altseason/)
 ba-pm-kit/index.html    BA & PM Presentation Kit page (/ba-pm-kit/), standalone corporate style, no crypto links
 css/ba-pm-kit.css       Styles for /ba-pm-kit/ only (does not load style.css)
+studio/index.html       Azneeza AL | ALZ Technology Portfolio (/studio/): ALZ services, capabilities, career case studies, client work, Lab demos
+studio/studio.css       Studio styles (loads after css/style.css)
+studio/js/studio.js     Lab demos (reconciliation, ticket triage, master data, research framework); synthetic data embedded
+studio/cheatsheet.html  Printable Self-Custody Security Cheatsheet (linked from the wallet case study)
 assets/img/ba-pm-kit/   Kit cover, OG image (1200x630) and 14 slide previews
 css/altseason.css       Altseason page styles (loads after style.css)
 js/altseason.js         Altseason index, stats, charts (Chart.js CDN), TradingView embed
