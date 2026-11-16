@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="en">
+<head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-M6ZDXHGDDV"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-M6ZDXHGDDV');
+</script>
+
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Enterprise Delivery Lab | Azneeza AL | ALZ Technology Portfolio</title>
+<meta name="description" content="Demonstration prototype: a Jira-style walkthrough of requirements, issues, UAT, defects and release readiness, with synthetic project data across six scenarios.">
+<link rel="canonical" href="https://alztechnology.github.io/studio/delivery-lab.html">
+<meta name="theme-color" content="#0a1430">
+<link rel="icon" href="../favicon.ico" sizes="any">
+<link rel="icon" type="image/png" sizes="32x32" href="../assets/img/favicon-32.png">
+<link rel="apple-touch-icon" href="../assets/img/apple-touch-icon.png">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="ALZ Technology">
+<meta property="og:url" content="https://alztechnology.github.io/studio/delivery-lab.html">
+<meta property="og:title" content="Enterprise Delivery Lab | Azneeza AL">
+<meta property="og:description" content="A Jira-style demonstration prototype of requirements, issues, UAT and release readiness, using synthetic data only.">
+<meta property="og:image" content="https://alztechnology.github.io/assets/img/og-image.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Enterprise Delivery Lab | Azneeza AL">
+<meta name="twitter:image" content="https://alztechnology.github.io/assets/img/og-image.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../css/style.css">
+<link rel="stylesheet" href="studio.css">
+<link rel="stylesheet" href="delivery-lab.css">
+</head>
+<body class="st">
+<a class="skip-link" href="#main">Skip to content</a>
+
+<header class="nav">
+  <div class="container nav__inner">
+    <a class="nav__brand" href="../" aria-label="ALZ Technology home">
+      <img src="../assets/img/alz-mark.png" alt="" width="58" height="22">
+      <span>ALZ Portfolio</span>
+    </a>
+    <nav aria-label="Delivery Lab">
+      <ul class="nav__links">
+        <li><a href="index.html">← Portfolio</a></li>
+        <li class="hide-xs"><a href="index.html#lab">Finance Lab</a></li>
+        <li><a href="delivery-lab.html" aria-current="page">Delivery Lab</a></li>
+        <li class="hide-sm"><a href="../">Home</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+  <section class="edl-hero" id="top">
+    <div class="container">
+      <p class="eyebrow">Azneeza AL · ALZ Technology Portfolio</p>
+      <h1>Enterprise <span class="grad-text">Delivery Lab</span></h1>
+      <p class="lead">A demonstration prototype that walks through how a business analyst takes work from requirements to release: stories and acceptance criteria, Jira-style issues, a sprint board, UAT and defects, then readiness and a simple management view. It reflects how I work, drawing on UAT and defect management at HP (1,700+ UAT scripts, 670 critical defects tracked) and Jira requirements and UAT at Kinesis Money (Metalback project).</p>
+      <div class="demo__label">
+        <span class="badge badge--demo">Demonstration prototype · synthetic data</span>
+        <span class="badge badge--sim">Simulated AI output · rule-based</span>
+      </div>
+      <p class="callout callout--warn" style="margin-top:18px"><strong>Please note:</strong> every project, ticket, name and figure on this page is synthetic and built for this portfolio. No real company, client or personal data is used. Everything runs in your browser; nothing is sent anywhere. Where the lab shows an "AI" suggestion, it is <strong>simulated with simple rules</strong>, not a live AI model.</p>
+    </div>
+  </section>
+
+  <section class="section" style="padding-top:0" aria-labelledby="lab-workspace">
+    <div class="container">
+      <div class="edl-toolbar">
+        <p class="edl-kicker" id="lab-workspace">Project scenario</p>
+        <div class="edl-scenarios" id="edl-scenarios" role="group" aria-label="Project scenarios"></div>
+      </div>
+
+      <div class="panel">
+        <div id="edl-context"></div>
+        <div class="edl-tabs" id="edl-tabs" role="tablist" aria-label="Delivery lifecycle"></div>
+        <div class="edl-panel" id="edl-panel"></div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<div class="edl-backdrop" id="edl-backdrop" hidden></div>
+<aside class="edl-drawer" id="edl-drawer" role="dialog" aria-modal="true" aria-labelledby="edl-drawer-title" hidden></aside>
+
+<footer class="footer">
+  <div class="container footer__inner">
+    <div>
+      <div class="footer__brand"><img src="../assets/img/alz-mark.png" alt="" width="53" height="20"> ALZ Technology</div>
+      <p style="margin-top:8px">© 2026 ALZ Technology · <a href="index.html">Portfolio</a> · <a href="../">Home</a> · <a href="https://www.linkedin.com/company/alz-technology/" target="_blank" rel="noopener">LinkedIn</a></p>
+    </div>
+    <p class="disclaimer">This page is a demonstration prototype using synthetic data. Simulated outputs are rule-based. It does not describe a live client engagement. Digital asset content is for general information and education only and is not financial, investment, legal or tax advice.</p>
+  </div>
+</footer>
+
+<script src="js/delivery-lab.js" defer></script>
+</body>
+</html>

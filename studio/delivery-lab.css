@@ -1,0 +1,75 @@
+/* Enterprise Delivery Lab (/studio/delivery-lab.html). Loads after studio.css */
+.edl-hero{padding:56px 0 28px}
+.edl-hero h1{font-size:clamp(26px,5vw,42px);line-height:1.15;margin:8px 0 12px;letter-spacing:-.02em;max-width:900px}
+.edl-hero .lead{color:var(--muted);max-width:760px;font-size:clamp(15px,2.2vw,18px);margin:0 0 18px}
+.edl-toolbar{margin:0 0 18px}
+.edl-scenarios{display:flex;flex-wrap:wrap;gap:8px;margin:8px 0 0}
+.edl-scen{font:inherit;font-size:13px;text-align:left;padding:8px 12px;border-radius:12px;background:rgba(255,255,255,.04);border:1px solid var(--line);color:var(--text);cursor:pointer;line-height:1.35;max-width:100%}
+.edl-scen small{display:block;color:var(--dim);font-size:11.5px;font-weight:500}
+.edl-scen:hover{border-color:rgba(25,211,197,.45)}
+.edl-scen[aria-pressed="true"]{border-color:rgba(25,211,197,.7);background:rgba(25,211,197,.12);box-shadow:0 0 0 1px rgba(25,211,197,.2)}
+.edl-tabs{display:flex;flex-wrap:wrap;gap:6px;margin:0 0 16px;padding:0;list-style:none}
+.edl-tabs button{font:inherit;font-size:13px;padding:7px 12px;border-radius:999px;background:transparent;border:1px solid var(--line);color:var(--muted);cursor:pointer}
+.edl-tabs button:hover{color:var(--text);text-decoration:none;border-color:rgba(25,211,197,.45)}
+.edl-tabs button[aria-selected="true"]{color:#04122b;background:var(--grad);border-color:transparent;font-weight:600}
+.edl-panel{min-height:280px}
+.edl-kicker{font-size:12px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--teal);margin:0 0 6px}
+.edl-issue{cursor:pointer}
+.edl-issue:hover td{background:rgba(25,211,197,.06)}
+.edl-issue:focus{outline:none}
+.edl-issue:focus-visible td{outline:2px solid var(--teal);outline-offset:-2px}
+.edl-board-wrap{overflow-x:auto;-webkit-overflow-scrolling:touch;margin:10px 0 8px;padding-bottom:6px}
+@media(max-width:1100px){.edl-board{min-width:1000px}}
+.edl-board{display:grid;grid-template-columns:repeat(5,minmax(168px,1fr));gap:12px}
+.edl-col{background:rgba(255,255,255,.03);border:1px solid var(--line);border-radius:14px;padding:10px;min-height:220px}
+.edl-col h3{margin:0 0 10px;font-size:13px;display:flex;justify-content:space-between;gap:8px;align-items:center}
+.edl-col h3 span{font-size:11px;font-weight:700;color:var(--dim);background:rgba(255,255,255,.05);padding:2px 7px;border-radius:999px}
+.edl-card{width:100%;text-align:left;font:inherit;display:block;background:linear-gradient(180deg,var(--card),var(--bg-2));border:1px solid var(--line);border-radius:12px;padding:10px 12px;margin:0 0 8px;color:var(--text);cursor:pointer}
+.edl-card:hover{border-color:rgba(25,211,197,.5)}
+.edl-card b{display:block;font-size:12px;color:var(--teal);margin:0 0 4px}
+.edl-card p{margin:0;font-size:13px;color:#dce4f5;line-height:1.4}
+.edl-card .meta{display:flex;flex-wrap:wrap;gap:6px;margin-top:8px}
+.edl-check{list-style:none;padding:0;margin:0}
+.edl-check li{display:grid;grid-template-columns:22px 1fr;gap:10px;align-items:start;padding:10px 0;border-bottom:1px solid var(--line);font-size:14px;color:#dce4f5}
+.edl-check li:last-child{border-bottom:0}
+.edl-check .mark{width:18px;height:18px;border-radius:50%;margin-top:2px;display:grid;place-items:center;font-size:11px;font-weight:800}
+.edl-check .mark.ok{background:rgba(34,211,154,.2);color:var(--up)}
+.edl-check .mark.warn{background:rgba(255,184,77,.2);color:var(--warn)}
+.edl-check .mark.bad{background:rgba(255,92,122,.2);color:var(--bad)}
+.edl-chart{width:100%;height:220px;display:block}
+.edl-legend-row{display:flex;flex-wrap:wrap;gap:10px 16px;margin:8px 0 0;font-size:12px;color:var(--muted)}
+.edl-legend-row i{display:inline-block;width:10px;height:10px;border-radius:2px;margin-right:6px;vertical-align:middle}
+.edl-trace{display:flex;flex-wrap:wrap;gap:6px;align-items:center;font-size:13px;margin:0 0 8px}
+.edl-trace span{color:var(--dim)}
+.edl-backdrop{position:fixed;inset:0;background:rgba(4,10,24,.62);z-index:70;opacity:0;pointer-events:none;transition:opacity .2s}
+.edl-backdrop.is-open{opacity:1;pointer-events:auto}
+.edl-drawer{position:fixed;top:0;right:0;bottom:0;width:min(520px,100%);background:linear-gradient(180deg,#0f1c44,var(--bg));border-left:1px solid var(--line);z-index:80;overflow-y:auto;transform:translateX(100%);transition:transform .22s ease;padding:20px 20px 40px;box-shadow:-16px 0 40px rgba(0,0,0,.35)}
+.edl-drawer.is-open{transform:translateX(0)}
+.edl-drawer__top{display:flex;justify-content:space-between;align-items:flex-start;gap:12px;margin-bottom:12px}
+.edl-drawer__top h2{margin:0;font-size:18px;line-height:1.3}
+.edl-close{font:inherit;font-size:13px;font-weight:600;border:1px solid var(--line);background:rgba(255,255,255,.04);color:var(--text);border-radius:10px;padding:6px 10px;cursor:pointer}
+.edl-close:hover{border-color:rgba(25,211,197,.5)}
+.edl-dl{margin:0 0 14px}
+.edl-dl > div{padding:10px 0;border-bottom:1px solid var(--line)}
+.edl-dl dt{font-size:11px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--teal);margin:0 0 4px}
+.edl-dl dd{margin:0;color:#dce4f5;font-size:14px}
+.edl-dl ol,.edl-dl ul{margin:0;padding-left:18px}
+.edl-empty{color:var(--dim);font-size:14px;padding:12px 0}
+.edl-prio-crit,.pill--crit{color:#ff8fa3;background:rgba(255,92,122,.14)}
+.edl-go{padding:14px 16px;border-radius:12px;border:1px solid var(--line);margin:12px 0}
+.edl-go--go{border-color:rgba(34,211,154,.4);background:rgba(34,211,154,.08)}
+.edl-go--conditional{border-color:rgba(255,184,77,.4);background:rgba(255,184,77,.08)}
+.edl-go--nogo{border-color:rgba(255,92,122,.4);background:rgba(255,92,122,.08)}
+.edl-go strong{display:block;margin-bottom:4px;color:var(--text)}
+.edl-sim{border:1px dashed rgba(190,120,255,.45);border-radius:12px;padding:10px 12px;margin:8px 0 12px;font-size:13px;color:#e6d2ff}
+body.edl-lock{overflow:hidden}
+@media(max-width:599px){
+  .edl-hero{padding:36px 0 20px}
+  .edl-scen{flex:1 1 calc(50% - 8px)}
+  .edl-drawer{width:100%;padding-top:16px}
+  table.tbl.edl-tbl{min-width:640px}
+}
+
+.edl-panel .stat b{white-space:nowrap}
+
+#edl-context,.edl-board-wrap,.edl-panel{scroll-margin-top:80px}

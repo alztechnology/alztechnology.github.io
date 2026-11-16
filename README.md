@@ -19,6 +19,9 @@ studio/index.html       Azneeza AL | ALZ Technology Portfolio (/studio/): ALZ se
 studio/studio.css       Studio styles (loads after css/style.css)
 studio/js/studio.js     Lab demos (reconciliation, ticket triage, master data, research framework); synthetic data embedded
 studio/cheatsheet.html  Printable Self-Custody Security Cheatsheet (linked from the wallet case study)
+studio/delivery-lab.html  Enterprise Delivery Lab: Jira-style requirements, issues, board, UAT and release demo (synthetic data)
+studio/delivery-lab.css   Styles for /studio/delivery-lab.html
+studio/js/delivery-lab.js Delivery Lab scenarios and UI; synthetic data embedded
 assets/img/ba-pm-kit/   Kit cover, OG image (1200x630) and 14 slide previews
 css/altseason.css       Altseason page styles (loads after style.css)
 js/altseason.js         Altseason index, stats, charts (Chart.js CDN), TradingView embed
