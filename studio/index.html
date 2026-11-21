@@ -34,6 +34,18 @@
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="../css/style.css">
 <link rel="stylesheet" href="studio.css">
+<style>
+  /* Show a short BA nav label on small screens; keep the full label from 640px up. */
+  .nav-label-short{display:inline}
+  .nav-label-long{display:none}
+  @media(min-width:640px){
+    .nav-label-short{display:none}
+    .nav-label-long{display:inline}
+  }
+  .nav__links a.nav-ba{white-space:nowrap}
+  /* Keep the brand wordmark off until 640px so ALZ / Capabilities / Career / BA / Lab do not collide with it. */
+  @media(max-width:639px){.nav__brand span{display:none}}
+</style>
 </head>
 <body class="st">
 <a class="skip-link" href="#main">Skip to content</a>
@@ -50,7 +62,7 @@
         <li class="hide-xs"><a href="#capabilities">Capabilities</a></li>
         <li><a href="#career">Career</a></li>
         <li class="hide-sm"><a href="#consulting">Consulting</a></li>
-        <li class="hide-sm"><a href="ba-portfolio.html">Senior BA portfolio</a></li>
+        <li><a class="nav-ba" href="ba-portfolio.html"><span class="nav-label-short">BA</span><span class="nav-label-long">Senior BA portfolio</span></a></li>
         <li><a href="#lab">Lab</a></li>
         <li class="hide-sm"><a href="../">Home</a></li>
       </ul>
