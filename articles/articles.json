@@ -1,5 +1,15 @@
 [
   {
+    "title": "Why Third-Party Due Diligence Matters, and How a DDQ Works",
+    "url": "articles/kyc-ddq-third-party-due-diligence.html",
+    "image": "articles/img/kyc-ddq-third-party-due-diligence.jpg",
+    "imageAlt": "A glowing shield around a due diligence questionnaire, connected to a partner network, an ownership tree, a risk gauge and a document review lens",
+    "summary": "A compliance analyst's walk through why KYC, KYB and partner due diligence are more than a checkbox, how a Due Diligence Questionnaire actually works, and what reviewers look for in the answers.",
+    "tag": "Compliance",
+    "date": "2026-11-27",
+    "readMinutes": 5
+  },
+  {
     "title": "Layer 1 vs Layer 2: What's the Difference?",
     "url": "articles/layer1-vs-layer2.html",
     "image": "articles/img/layer1-vs-layer2.jpg",

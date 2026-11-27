@@ -1,0 +1,354 @@
+<!doctype html>
+<html lang="en">
+<head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-M6ZDXHGDDV"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-M6ZDXHGDDV');
+</script>
+
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Why Third-Party Due Diligence Matters, and How a DDQ Works | ALZ Technology</title>
+<meta name="description" content="A compliance analyst's walk through why KYC, KYB and partner due diligence are more than a checkbox, how a Due Diligence Questionnaire actually works, and what reviewers look for in the answers.">
+<meta name="theme-color" content="#0a1430">
+<link rel="icon" href="../favicon.ico" sizes="any">
+<link rel="icon" type="image/png" sizes="32x32" href="../assets/img/favicon-32.png">
+<link rel="apple-touch-icon" href="../assets/img/apple-touch-icon.png">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="ALZ Technology">
+<meta property="og:title" content="Why Third-Party Due Diligence Matters, and How a DDQ Works">
+<meta property="og:description" content="A compliance analyst's walk through why KYC, KYB and partner due diligence are more than a checkbox, how a Due Diligence Questionnaire actually works, and what reviewers look for in the answers.">
+<meta property="og:image" content="https://alztechnology.github.io/articles/img/kyc-ddq-third-party-due-diligence.jpg">
+<meta property="article:published_time" content="2026-11-27">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Why Third-Party Due Diligence Matters, and How a DDQ Works">
+<meta name="twitter:description" content="A compliance analyst's walk through why KYC, KYB and partner due diligence are more than a checkbox, how a Due Diligence Questionnaire actually works, and what reviewers look for in the answers.">
+<meta name="twitter:image" content="https://alztechnology.github.io/articles/img/kyc-ddq-third-party-due-diligence.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../css/style.css">
+<style>
+  .figure{margin:1.8em 0 1.7em;background:var(--card);border:1px solid var(--line);border-radius:16px;padding:18px 16px 14px}
+  .figure__head{display:flex;align-items:flex-start;justify-content:space-between;gap:10px;flex-wrap:wrap;margin:0 0 12px}
+  .figure__title{font-size:15px;font-weight:700;color:var(--text);margin:0;line-height:1.35}
+  .figure__badge{display:inline-block;font-size:10px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:#04122b;background:var(--teal);border-radius:999px;padding:4px 9px;white-space:nowrap}
+  .figure__chart{width:100%;height:auto;display:block}
+  .figure__chart--mobile{display:none}
+  .figure__caption{font-size:12.5px;color:var(--dim);margin:12px 0 0;line-height:1.55}
+  @media(max-width:639px){
+    .figure{padding:14px 10px 12px}
+    .figure__title{font-size:14px}
+    .figure__chart--desktop{display:none}
+    .figure__chart--mobile{display:block}
+  }
+</style>
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+<header class="nav" style="top:0">
+  <div class="container nav__inner">
+    <a class="nav__brand" href="../index.html" aria-label="ALZ Technology home">
+      <img src="../assets/img/alz-mark.png" alt="" width="58" height="22"><span>ALZ Technology</span>
+    </a>
+    <nav aria-label="Main">
+      <ul class="nav__links">
+        <li><a href="../index.html#markets">Markets</a></li>
+        <li><a href="../index.html#articles">Articles</a></li>
+        <li><a class="hide-sm" href="https://www.linkedin.com/company/alz-technology/" target="_blank" rel="noopener">LinkedIn</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main id="main" class="article">
+  <article class="container article__wrap">
+    <nav class="crumbs" aria-label="Breadcrumb"><a href="../index.html#articles">← All articles</a></nav>
+    <p class="eyebrow">Compliance</p>
+    <h1>Why Third-Party Due Diligence Matters, and How a DDQ Works</h1>
+    <div class="article__meta"><span>ALZ Technology</span><time datetime="2026-11-27">27 Nov 2026</time><span>5 min read</span></div>
+    <img class="article__hero" src="img/kyc-ddq-third-party-due-diligence.jpg" alt="A glowing shield around a due diligence questionnaire, connected to a partner network, an ownership tree, a risk gauge and a document review lens" width="1280" height="720">
+
+    <div class="prose">
+      <p class="lede">When a company onboards a new reseller, supplier, agent or joint-venture partner, it is also taking on that party's reputation, controls and conduct. Know Your Customer (KYC), Know Your Business (KYB) and Know Your Partner (KYP) are often treated as a form to complete and file. In practice, they are how an organisation decides who it is willing to do business with, and on what terms.</p>
+
+      <p>This article is written from a compliance analyst's perspective, shaped by work on third-party due diligence, partner risk and fraud analytics, red-flag and gray-market detection, and anti-corruption partner screening in global partner ecosystems. It is not a guide to banking transaction monitoring or AML case investigation. Those are different disciplines. The focus here is the structured questionnaire at the centre of most enterprise due diligence programmes: the Due Diligence Questionnaire, or DDQ.</p>
+
+      <h2>Why this is more than a checkbox</h2>
+      <p>People often use "KYC" as a catch-all. In a partner or vendor programme, the work is usually closer to KYB (verifying the legal entity) and KYP (understanding the commercial partner, reseller or agent). The point is the same: confirm who you are dealing with, who ultimately owns and controls them, and whether the relationship creates a risk the business should not accept.</p>
+      <p>Regulators do not treat "we did not know" as a defence when a third party pays a bribe, funnels goods into a restricted channel, or conceals who actually owns the business. Under the US Foreign Corrupt Practices Act (FCPA) and the UK Bribery Act, companies can be held responsible for the conduct of agents, distributors and other intermediaries acting on their behalf. A weak onboarding process becomes regulatory exposure, not just a paperwork gap.</p>
+      <p>The commercial risks are just as real:</p>
+      <ul>
+        <li><strong>Reputational harm.</strong> A partner later tied to corruption, sanctions issues or consumer harm can damage the brand that appointed them, even if the company itself did not write the cheque.</li>
+        <li><strong>Partner and channel fraud.</strong> Sham resellers, unusual shipping or discount patterns, and gray-market diversion can leak revenue and put authorised channels under pressure.</li>
+        <li><strong>Wasted deals and weak controls.</strong> Ownership, licences or financials that do not stand up to a closer look stall contracts, or worse, let a high-risk relationship start without a senior reviewer ever seeing the gaps.</li>
+      </ul>
+      <p>A risk-based approach keeps this practical. Not every third party needs the same depth of review. Low-risk, well-known counterparties may pass through an automated check. Higher-risk relationships, new markets, politically exposed owners or complex intermediary chains should trigger a fuller DDQ, and in some cases Enhanced Due Diligence (EDD).</p>
+
+      <figure class="figure" aria-describedby="fig1-caption">
+        <div class="figure__head">
+          <p class="figure__title" id="fig1-title">Third-party risk tier and DDQ depth</p>
+          <span class="figure__badge">Illustrative example</span>
+        </div>
+        <svg class="figure__chart figure__chart--desktop" viewBox="0 0 680 360" role="img" aria-labelledby="fig1-title fig1-desc" xmlns="http://www.w3.org/2000/svg">
+          <title id="fig1-svg-title">Illustrative example: typical DDQ risk-tier breakdown across 500 third-party partners</title>
+          <desc id="fig1-desc">Sample workflow data for 500 third-party partners. Low risk: 300 partners, 60 percent, Automated Check, typical review 2 days. Medium risk: 150 partners, 30 percent, Standard DDQ, typical review 8 days. High risk: 50 partners, 10 percent, Enhanced Due Diligence, typical review 21 days.</desc>
+          <rect width="680" height="360" fill="#111f47" rx="12"/>
+          <!-- Low -->
+          <rect x="16" y="16" width="208" height="328" fill="#14254f" rx="12"/>
+          <rect x="16" y="16" width="208" height="6" fill="#19d3c5" rx="3"/>
+          <text x="120" y="48" text-anchor="middle" fill="#a9b6d3" font-family="Inter,system-ui,sans-serif" font-size="12" font-weight="600" letter-spacing="0.08em">LOW RISK</text>
+          <text x="120" y="108" text-anchor="middle" fill="#19d3c5" font-family="Inter,system-ui,sans-serif" font-size="42" font-weight="800">60%</text>
+          <text x="120" y="132" text-anchor="middle" fill="#ffffff" font-family="Inter,system-ui,sans-serif" font-size="13" font-weight="600">300 of 500 partners</text>
+          <line x1="36" y1="150" x2="204" y2="150" stroke="rgba(255,255,255,.08)"/>
+          <text x="120" y="176" text-anchor="middle" fill="#7d8bab" font-family="Inter,system-ui,sans-serif" font-size="11" font-weight="600" letter-spacing="0.06em">REVIEW DEPTH</text>
+          <text x="120" y="202" text-anchor="middle" fill="#ffffff" font-family="Inter,system-ui,sans-serif" font-size="14" font-weight="700">Automated Check</text>
+          <rect x="36" y="222" width="168" height="10" fill="#0a1430" rx="5"/>
+          <rect x="36" y="222" width="16" height="10" fill="#19d3c5" rx="5"/>
+          <text x="120" y="256" text-anchor="middle" fill="#a9b6d3" font-family="Inter,system-ui,sans-serif" font-size="13">Typical review: 2 days</text>
+          <text x="120" y="318" text-anchor="middle" fill="#7d8bab" font-family="Inter,system-ui,sans-serif" font-size="11">Registry and watchlist</text>
+          <text x="120" y="334" text-anchor="middle" fill="#7d8bab" font-family="Inter,system-ui,sans-serif" font-size="11">screening, light evidence</text>
+          <!-- Medium -->
+          <rect x="236" y="16" width="208" height="328" fill="#14254f" rx="12"/>
+          <rect x="236" y="16" width="208" height="6" fill="#1e9bff" rx="3"/>
+          <text x="340" y="48" text-anchor="middle" fill="#a9b6d3" font-family="Inter,system-ui,sans-serif" font-size="12" font-weight="600" letter-spacing="0.08em">MEDIUM RISK</text>
+          <text x="340" y="108" text-anchor="middle" fill="#1e9bff" font-family="Inter,system-ui,sans-serif" font-size="42" font-weight="800">30%</text>
+          <text x="340" y="132" text-anchor="middle" fill="#ffffff" font-family="Inter,system-ui,sans-serif" font-size="13" font-weight="600">150 of 500 partners</text>
+          <line x1="256" y1="150" x2="424" y2="150" stroke="rgba(255,255,255,.08)"/>
+          <text x="340" y="176" text-anchor="middle" fill="#7d8bab" font-family="Inter,system-ui,sans-serif" font-size="11" font-weight="600" letter-spacing="0.06em">REVIEW DEPTH</text>
+          <text x="340" y="202" text-anchor="middle" fill="#ffffff" font-family="Inter,system-ui,sans-serif" font-size="14" font-weight="700">Standard DDQ</text>
+          <rect x="256" y="222" width="168" height="10" fill="#0a1430" rx="5"/>
+          <rect x="256" y="222" width="64" height="10" fill="#1e9bff" rx="5"/>
+          <text x="340" y="256" text-anchor="middle" fill="#a9b6d3" font-family="Inter,system-ui,sans-serif" font-size="13">Typical review: 8 days</text>
+          <text x="340" y="318" text-anchor="middle" fill="#7d8bab" font-family="Inter,system-ui,sans-serif" font-size="11">Ownership, financials and</text>
+          <text x="340" y="334" text-anchor="middle" fill="#7d8bab" font-family="Inter,system-ui,sans-serif" font-size="11">compliance controls reviewed</text>
+          <!-- High -->
+          <rect x="456" y="16" width="208" height="328" fill="#14254f" rx="12"/>
+          <rect x="456" y="16" width="208" height="6" fill="#ff5c7a" rx="3"/>
+          <text x="560" y="48" text-anchor="middle" fill="#a9b6d3" font-family="Inter,system-ui,sans-serif" font-size="12" font-weight="600" letter-spacing="0.08em">HIGH RISK</text>
+          <text x="560" y="108" text-anchor="middle" fill="#ff5c7a" font-family="Inter,system-ui,sans-serif" font-size="42" font-weight="800">10%</text>
+          <text x="560" y="132" text-anchor="middle" fill="#ffffff" font-family="Inter,system-ui,sans-serif" font-size="13" font-weight="600">50 of 500 partners</text>
+          <line x1="476" y1="150" x2="644" y2="150" stroke="rgba(255,255,255,.08)"/>
+          <text x="560" y="176" text-anchor="middle" fill="#7d8bab" font-family="Inter,system-ui,sans-serif" font-size="11" font-weight="600" letter-spacing="0.06em">REVIEW DEPTH</text>
+          <text x="560" y="202" text-anchor="middle" fill="#ffffff" font-family="Inter,system-ui,sans-serif" font-size="13" font-weight="700">Enhanced Due Diligence</text>
+          <rect x="476" y="222" width="168" height="10" fill="#0a1430" rx="5"/>
+          <rect x="476" y="222" width="168" height="10" fill="#ff5c7a" rx="5"/>
+          <text x="560" y="256" text-anchor="middle" fill="#a9b6d3" font-family="Inter,system-ui,sans-serif" font-size="13">Typical review: 21 days</text>
+          <text x="560" y="318" text-anchor="middle" fill="#7d8bab" font-family="Inter,system-ui,sans-serif" font-size="11">Source-of-wealth, site or</text>
+          <text x="560" y="334" text-anchor="middle" fill="#7d8bab" font-family="Inter,system-ui,sans-serif" font-size="11">media review, senior sign-off</text>
+        </svg>
+
+        <svg class="figure__chart figure__chart--mobile" viewBox="0 0 360 640" role="img" aria-labelledby="fig1-title fig1-desc" xmlns="http://www.w3.org/2000/svg">
+          <title>Illustrative example: typical DDQ risk-tier breakdown across 500 third-party partners</title>
+          <rect width="360" height="640" fill="#111f47" rx="12"/>
+          <!-- Low -->
+          <rect x="12" y="12" width="336" height="196" fill="#14254f" rx="12"/>
+          <rect x="12" y="12" width="336" height="6" fill="#19d3c5" rx="3"/>
+          <text x="28" y="44" fill="#a9b6d3" font-family="Inter,system-ui,sans-serif" font-size="13" font-weight="600" letter-spacing="0.08em">LOW RISK</text>
+          <text x="28" y="96" fill="#19d3c5" font-family="Inter,system-ui,sans-serif" font-size="40" font-weight="800">60%</text>
+          <text x="28" y="122" fill="#ffffff" font-family="Inter,system-ui,sans-serif" font-size="14" font-weight="600">300 of 500 partners</text>
+          <text x="332" y="48" text-anchor="end" fill="#ffffff" font-family="Inter,system-ui,sans-serif" font-size="15" font-weight="700">Automated Check</text>
+          <rect x="180" y="66" width="152" height="10" fill="#0a1430" rx="5"/>
+          <rect x="180" y="66" width="15" height="10" fill="#19d3c5" rx="5"/>
+          <text x="332" y="100" text-anchor="end" fill="#a9b6d3" font-family="Inter,system-ui,sans-serif" font-size="13">Typical review: 2 days</text>
+          <text x="28" y="168" fill="#7d8bab" font-family="Inter,system-ui,sans-serif" font-size="13">Registry and watchlist screening,</text>
+          <text x="28" y="186" fill="#7d8bab" font-family="Inter,system-ui,sans-serif" font-size="13">light evidence pack</text>
+          <!-- Medium -->
+          <rect x="12" y="222" width="336" height="196" fill="#14254f" rx="12"/>
+          <rect x="12" y="222" width="336" height="6" fill="#1e9bff" rx="3"/>
+          <text x="28" y="254" fill="#a9b6d3" font-family="Inter,system-ui,sans-serif" font-size="13" font-weight="600" letter-spacing="0.08em">MEDIUM RISK</text>
+          <text x="28" y="306" fill="#1e9bff" font-family="Inter,system-ui,sans-serif" font-size="40" font-weight="800">30%</text>
+          <text x="28" y="332" fill="#ffffff" font-family="Inter,system-ui,sans-serif" font-size="14" font-weight="600">150 of 500 partners</text>
+          <text x="332" y="258" text-anchor="end" fill="#ffffff" font-family="Inter,system-ui,sans-serif" font-size="15" font-weight="700">Standard DDQ</text>
+          <rect x="180" y="276" width="152" height="10" fill="#0a1430" rx="5"/>
+          <rect x="180" y="276" width="58" height="10" fill="#1e9bff" rx="5"/>
+          <text x="332" y="310" text-anchor="end" fill="#a9b6d3" font-family="Inter,system-ui,sans-serif" font-size="13">Typical review: 8 days</text>
+          <text x="28" y="378" fill="#7d8bab" font-family="Inter,system-ui,sans-serif" font-size="13">Ownership, financials and</text>
+          <text x="28" y="396" fill="#7d8bab" font-family="Inter,system-ui,sans-serif" font-size="13">compliance controls reviewed</text>
+          <!-- High -->
+          <rect x="12" y="432" width="336" height="196" fill="#14254f" rx="12"/>
+          <rect x="12" y="432" width="336" height="6" fill="#ff5c7a" rx="3"/>
+          <text x="28" y="464" fill="#a9b6d3" font-family="Inter,system-ui,sans-serif" font-size="13" font-weight="600" letter-spacing="0.08em">HIGH RISK</text>
+          <text x="28" y="516" fill="#ff5c7a" font-family="Inter,system-ui,sans-serif" font-size="40" font-weight="800">10%</text>
+          <text x="28" y="542" fill="#ffffff" font-family="Inter,system-ui,sans-serif" font-size="14" font-weight="600">50 of 500 partners</text>
+          <text x="332" y="468" text-anchor="end" fill="#ffffff" font-family="Inter,system-ui,sans-serif" font-size="14" font-weight="700">Enhanced Due Diligence</text>
+          <rect x="180" y="486" width="152" height="10" fill="#0a1430" rx="5"/>
+          <rect x="180" y="486" width="152" height="10" fill="#ff5c7a" rx="5"/>
+          <text x="332" y="520" text-anchor="end" fill="#a9b6d3" font-family="Inter,system-ui,sans-serif" font-size="13">Typical review: 21 days</text>
+          <text x="28" y="588" fill="#7d8bab" font-family="Inter,system-ui,sans-serif" font-size="13">Source-of-wealth, site or media</text>
+          <text x="28" y="606" fill="#7d8bab" font-family="Inter,system-ui,sans-serif" font-size="13">review, senior sign-off</text>
+        </svg>
+        <figcaption class="figure__caption" id="fig1-caption">Illustrative example: typical DDQ risk-tier breakdown across 500 third-party partners, with the review depth usually applied at each tier. These figures are sample workflow data, not results from a specific programme or study.</figcaption>
+      </figure>
+
+      <h2>How a DDQ actually works</h2>
+      <p>A good DDQ is a structured conversation, not a long form for its own sake. The questions change with the risk of the relationship, but the workflow is usually the same.</p>
+      <ul>
+        <li><strong>1. Intake and scoping.</strong> The team captures who the third party is, what they will do, where they operate, and how they will be paid. This is where risk tiering happens. Scope decides whether the path is an automated check, a standard DDQ or EDD, and which evidence will be required: registration documents, ownership charts, licences, financials or references.</li>
+        <li><strong>2. Ownership and governance.</strong> Who ultimately owns and controls the entity? Beneficial ownership should be traced to natural persons, not a shell company or a vaguely described trust. The DDQ also asks about directors, key managers, politically exposed persons (PEPs), and whether any government official has an interest in the business.</li>
+        <li><strong>3. Financial and compliance controls.</strong> How is the company funded, and do the financials match public registries and the stated line of business? Does it have an anti-bribery policy, a code of conduct, and a way to report concerns? For channel partners, this is also where unusual discounting, inventory practices or transshipment routes start to show up.</li>
+        <li><strong>4. Red-flag triage and escalation.</strong> Incomplete answers, mismatches and hits against sanctions or PEP lists are not automatically a "no". They are a reason to pause, request better evidence, and escalate to a senior reviewer when the residual risk is still unclear. The analyst's job is to separate missing paperwork from a genuine integrity concern.</li>
+        <li><strong>5. Ongoing monitoring and renewal.</strong> Due diligence is not a one-time gate. Ownership changes, new adverse media, sanctions updates and unusual trading patterns should trigger a refresh. Higher-risk partners are typically reviewed on a shorter cycle than low-risk ones.</li>
+      </ul>
+
+      <h2>What a compliance analyst actually looks for</h2>
+      <p>The form itself is only the starting point. Reviewers spend most of their time on the gaps between what was written, what the documents show, and what the relationship looks like in practice.</p>
+      <ul>
+        <li><strong>Inconsistencies.</strong> A registered address that does not match the operating story, a business licence that covers a different activity, or financials that cannot support the proposed volume.</li>
+        <li><strong>Missing or obscured beneficial owners.</strong> Layers of holding companies, nominee shareholders, or an unexplained refusal to name the people who ultimately control the entity.</li>
+        <li><strong>Vague answers.</strong> Phrases such as "various investors" or "as required", or copied policy language that does not describe how the company actually works.</li>
+        <li><strong>Third-party intermediaries.</strong> An extra agent, consultant or "facilitator" in the payment or delivery chain with no clear commercial role.</li>
+        <li><strong>Channel and gray-market signals.</strong> Unusual shipping destinations, serial-number gaps, or pricing that does not fit the authorised route to market.</li>
+      </ul>
+
+      <figure class="figure" aria-describedby="fig2-caption">
+        <div class="figure__head">
+          <p class="figure__title" id="fig2-title">Common DDQ red-flag categories</p>
+          <span class="figure__badge">Illustrative example</span>
+        </div>
+        <svg class="figure__chart figure__chart--desktop" viewBox="0 0 680 340" role="img" aria-labelledby="fig2-title fig2-desc" xmlns="http://www.w3.org/2000/svg">
+          <title>Illustrative example: common red-flag categories flagged during partner onboarding</title>
+          <desc id="fig2-desc">Sample workflow data showing share of flags raised during partner onboarding. Incomplete beneficial ownership 32 percent, financial or registry mismatches 24 percent, unexplained intermediaries 18 percent, gray-market or channel anomalies 16 percent, sanctions or PEP hits 10 percent.</desc>
+          <rect width="680" height="340" fill="#111f47" rx="12"/>
+          <text x="24" y="28" fill="#7d8bab" font-family="Inter,system-ui,sans-serif" font-size="11" font-weight="600" letter-spacing="0.04em">SHARE OF FLAGS RAISED (SAMPLE WORKFLOW)</text>
+          <!-- grid lines at 10/20/30/40 -->
+          <line x1="250" y1="44" x2="250" y2="300" stroke="rgba(255,255,255,.06)"/>
+          <line x1="348" y1="44" x2="348" y2="300" stroke="rgba(255,255,255,.06)"/>
+          <line x1="446" y1="44" x2="446" y2="300" stroke="rgba(255,255,255,.06)"/>
+          <line x1="544" y1="44" x2="544" y2="300" stroke="rgba(255,255,255,.06)"/>
+          <line x1="642" y1="44" x2="642" y2="300" stroke="rgba(255,255,255,.10)"/>
+          <text x="250" y="318" text-anchor="middle" fill="#7d8bab" font-family="Inter,system-ui,sans-serif" font-size="10">0%</text>
+          <text x="348" y="318" text-anchor="middle" fill="#7d8bab" font-family="Inter,system-ui,sans-serif" font-size="10">10%</text>
+          <text x="446" y="318" text-anchor="middle" fill="#7d8bab" font-family="Inter,system-ui,sans-serif" font-size="10">20%</text>
+          <text x="544" y="318" text-anchor="middle" fill="#7d8bab" font-family="Inter,system-ui,sans-serif" font-size="10">30%</text>
+          <text x="642" y="318" text-anchor="middle" fill="#7d8bab" font-family="Inter,system-ui,sans-serif" font-size="10">40%</text>
+
+          <!-- Bar 1: 32% -> width = 32/40 * 392 = 313.6, x starts 250 -->
+          <text x="236" y="78" text-anchor="end" fill="#dce4f5" font-family="Inter,system-ui,sans-serif" font-size="13" font-weight="600">Incomplete Beneficial</text>
+          <text x="236" y="96" text-anchor="end" fill="#dce4f5" font-family="Inter,system-ui,sans-serif" font-size="13" font-weight="600">Ownership</text>
+          <rect x="250" y="68" width="314" height="28" rx="6" fill="url(#barTeal)"/>
+          <text x="572" y="87" fill="#ffffff" font-family="Inter,system-ui,sans-serif" font-size="13" font-weight="700">32%</text>
+
+          <!-- Bar 2: 24% -> 235.2 -->
+          <text x="236" y="126" text-anchor="end" fill="#dce4f5" font-family="Inter,system-ui,sans-serif" font-size="13" font-weight="600">Financial / Registry</text>
+          <text x="236" y="144" text-anchor="end" fill="#dce4f5" font-family="Inter,system-ui,sans-serif" font-size="13" font-weight="600">Mismatches</text>
+          <rect x="250" y="116" width="235" height="28" rx="6" fill="url(#barBlue)"/>
+          <text x="493" y="135" fill="#ffffff" font-family="Inter,system-ui,sans-serif" font-size="13" font-weight="700">24%</text>
+
+          <!-- Bar 3: 18% -> 176.4 -->
+          <text x="236" y="174" text-anchor="end" fill="#dce4f5" font-family="Inter,system-ui,sans-serif" font-size="13" font-weight="600">Unexplained</text>
+          <text x="236" y="192" text-anchor="end" fill="#dce4f5" font-family="Inter,system-ui,sans-serif" font-size="13" font-weight="600">Intermediaries</text>
+          <rect x="250" y="164" width="176" height="28" rx="6" fill="url(#barTeal)"/>
+          <text x="434" y="183" fill="#ffffff" font-family="Inter,system-ui,sans-serif" font-size="13" font-weight="700">18%</text>
+
+          <!-- Bar 4: 16% -> 156.8 -->
+          <text x="236" y="222" text-anchor="end" fill="#dce4f5" font-family="Inter,system-ui,sans-serif" font-size="13" font-weight="600">Gray-Market /</text>
+          <text x="236" y="240" text-anchor="end" fill="#dce4f5" font-family="Inter,system-ui,sans-serif" font-size="13" font-weight="600">Channel Anomalies</text>
+          <rect x="250" y="212" width="157" height="28" rx="6" fill="url(#barBlue)"/>
+          <text x="415" y="231" fill="#ffffff" font-family="Inter,system-ui,sans-serif" font-size="13" font-weight="700">16%</text>
+
+          <!-- Bar 5: 10% -> 98 -->
+          <text x="236" y="270" text-anchor="end" fill="#dce4f5" font-family="Inter,system-ui,sans-serif" font-size="13" font-weight="600">Sanctions /</text>
+          <text x="236" y="288" text-anchor="end" fill="#dce4f5" font-family="Inter,system-ui,sans-serif" font-size="13" font-weight="600">PEP Hits</text>
+          <rect x="250" y="260" width="98" height="28" rx="6" fill="#ff5c7a"/>
+          <text x="356" y="279" fill="#ffffff" font-family="Inter,system-ui,sans-serif" font-size="13" font-weight="700">10%</text>
+
+          <defs>
+            <linearGradient id="barTeal" x1="0" y1="0" x2="1" y2="0">
+              <stop offset="0%" stop-color="#19d3c5"/>
+              <stop offset="100%" stop-color="#1e9bff"/>
+            </linearGradient>
+            <linearGradient id="barBlue" x1="0" y1="0" x2="1" y2="0">
+              <stop offset="0%" stop-color="#1e9bff"/>
+              <stop offset="100%" stop-color="#19d3c5"/>
+            </linearGradient>
+          </defs>
+        </svg>
+
+        <svg class="figure__chart figure__chart--mobile" viewBox="0 0 360 420" role="img" aria-labelledby="fig2-title fig2-desc" xmlns="http://www.w3.org/2000/svg">
+          <title>Illustrative example: common red-flag categories flagged during partner onboarding</title>
+          <rect width="360" height="420" fill="#111f47" rx="12"/>
+          <text x="16" y="26" fill="#7d8bab" font-family="Inter,system-ui,sans-serif" font-size="10" font-weight="600" letter-spacing="0.04em">SHARE OF FLAGS RAISED (SAMPLE WORKFLOW)</text>
+          <line x1="16" y1="84" x2="344" y2="84" stroke="rgba(255,255,255,.06)"/>
+          <line x1="16" y1="84" x2="16" y2="84" stroke="rgba(255,255,255,.06)"/>
+          <!-- vertical grid at 0/10/20/30/40 of a 240px bar area starting x=16 after labels? 
+               Labels on top of each row, full-width bars below. Clearer on narrow screens. -->
+
+          <!-- Row 1: 32% of 240 = 192, bar x=16, width max 240? Use 16 to 328 = 312px for 40% scale, so 1% = 7.8 -->
+          <text x="16" y="54" fill="#dce4f5" font-family="Inter,system-ui,sans-serif" font-size="13" font-weight="600">Incomplete Beneficial Ownership</text>
+          <rect x="16" y="62" width="312" height="8" fill="#0a1430" rx="4"/>
+          <rect x="16" y="62" width="250" height="8" fill="url(#barTealM)" rx="4"/>
+          <text x="344" y="54" text-anchor="end" fill="#ffffff" font-family="Inter,system-ui,sans-serif" font-size="14" font-weight="700">32%</text>
+
+          <text x="16" y="114" fill="#dce4f5" font-family="Inter,system-ui,sans-serif" font-size="13" font-weight="600">Financial / Registry Mismatches</text>
+          <rect x="16" y="122" width="312" height="8" fill="#0a1430" rx="4"/>
+          <rect x="16" y="122" width="187" height="8" fill="url(#barBlueM)" rx="4"/>
+          <text x="344" y="114" text-anchor="end" fill="#ffffff" font-family="Inter,system-ui,sans-serif" font-size="14" font-weight="700">24%</text>
+
+          <text x="16" y="174" fill="#dce4f5" font-family="Inter,system-ui,sans-serif" font-size="13" font-weight="600">Unexplained Intermediaries</text>
+          <rect x="16" y="182" width="312" height="8" fill="#0a1430" rx="4"/>
+          <rect x="16" y="182" width="140" height="8" fill="url(#barTealM)" rx="4"/>
+          <text x="344" y="174" text-anchor="end" fill="#ffffff" font-family="Inter,system-ui,sans-serif" font-size="14" font-weight="700">18%</text>
+
+          <text x="16" y="234" fill="#dce4f5" font-family="Inter,system-ui,sans-serif" font-size="13" font-weight="600">Gray-Market / Channel Anomalies</text>
+          <rect x="16" y="242" width="312" height="8" fill="#0a1430" rx="4"/>
+          <rect x="16" y="242" width="125" height="8" fill="url(#barBlueM)" rx="4"/>
+          <text x="344" y="234" text-anchor="end" fill="#ffffff" font-family="Inter,system-ui,sans-serif" font-size="14" font-weight="700">16%</text>
+
+          <text x="16" y="294" fill="#dce4f5" font-family="Inter,system-ui,sans-serif" font-size="13" font-weight="600">Sanctions / PEP Hits</text>
+          <rect x="16" y="302" width="312" height="8" fill="#0a1430" rx="4"/>
+          <rect x="16" y="302" width="78" height="8" fill="#ff5c7a" rx="4"/>
+          <text x="344" y="294" text-anchor="end" fill="#ffffff" font-family="Inter,system-ui,sans-serif" font-size="14" font-weight="700">10%</text>
+
+          <!-- axis -->
+          <text x="16" y="346" fill="#7d8bab" font-family="Inter,system-ui,sans-serif" font-size="10">0%</text>
+          <text x="94" y="346" text-anchor="middle" fill="#7d8bab" font-family="Inter,system-ui,sans-serif" font-size="10">10%</text>
+          <text x="172" y="346" text-anchor="middle" fill="#7d8bab" font-family="Inter,system-ui,sans-serif" font-size="10">20%</text>
+          <text x="250" y="346" text-anchor="middle" fill="#7d8bab" font-family="Inter,system-ui,sans-serif" font-size="10">30%</text>
+          <text x="328" y="346" text-anchor="middle" fill="#7d8bab" font-family="Inter,system-ui,sans-serif" font-size="10">40%</text>
+          <line x1="16" y1="328" x2="328" y2="328" stroke="rgba(255,255,255,.12)"/>
+          <line x1="94" y1="328" x2="94" y2="322" stroke="rgba(255,255,255,.12)"/>
+          <line x1="172" y1="328" x2="172" y2="322" stroke="rgba(255,255,255,.12)"/>
+          <line x1="250" y1="328" x2="250" y2="322" stroke="rgba(255,255,255,.12)"/>
+          <line x1="328" y1="328" x2="328" y2="322" stroke="rgba(255,255,255,.12)"/>
+
+          <defs>
+            <linearGradient id="barTealM" x1="0" y1="0" x2="1" y2="0">
+              <stop offset="0%" stop-color="#19d3c5"/>
+              <stop offset="100%" stop-color="#1e9bff"/>
+            </linearGradient>
+            <linearGradient id="barBlueM" x1="0" y1="0" x2="1" y2="0">
+              <stop offset="0%" stop-color="#1e9bff"/>
+              <stop offset="100%" stop-color="#19d3c5"/>
+            </linearGradient>
+          </defs>
+        </svg>
+        <figcaption class="figure__caption" id="fig2-caption">Illustrative example: common red-flag categories flagged during partner onboarding, shown as a share of flags in a sample workflow. These figures are sample workflow data, not results from a specific programme or study.</figcaption>
+      </figure>
+
+      <p>None of these, on their own, prove misconduct. Together, they tell the analyst where to ask a sharper question, request a document, or escalate before a contract is signed.</p>
+
+      <h2>The takeaway</h2>
+      <p class="callout">Treat KYC, KYB and KYP as a decision about risk, not a filing exercise. A clear DDQ workflow, scoped to the risk, reviewed by someone who will challenge vague answers, and refreshed over the life of the relationship, is one of the most practical controls a company can put around its partners.</p>
+    </div>
+
+    <p class="article__foot">This article is for general information and education only. It is not financial, investment, legal or compliance advice. Chart figures are illustrative examples only.</p>
+  </article>
+</main>
+
+<footer class="footer">
+  <div class="container footer__inner">
+    <div>
+      <div class="footer__brand"><img src="../assets/img/alz-mark.png" alt="" width="53" height="20"> ALZ Technology</div>
+      <p style="margin-top:8px">© 2026 ALZ Technology · <a href="https://www.linkedin.com/company/alz-technology/" target="_blank" rel="noopener">LinkedIn</a></p>
+    </div>
+    <p class="disclaimer">Disclaimer: Content on this site is for general information and education only. It is not financial, investment, legal or tax advice. Crypto assets are volatile and you can lose money.</p>
+  </div>
+</footer>
+</body>
+</html>
